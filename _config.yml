@@ -1,8 +1,13 @@
-title: Just the Docs Template
+title: Military Ready Raspberry Pi
 description: A starter template for a Jeykll site using the Just the Docs theme!
 theme: just-the-docs
 
-url: https://MRE-PI.github.io/MRE-PI
+url: https://mre-pi.com
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "12.1.0"
