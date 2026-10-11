@@ -5,4 +5,4 @@ title: Image 1
 nav_enabled: true
 ---
 
-![MRE-PI](MRE-Pi.jpg)
+![MRE](MRE-Pi.jpg)
