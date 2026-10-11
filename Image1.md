@@ -5,4 +5,4 @@ title: Image 1
 nav_enabled: true
 ---
 
-![Image1](/MRE-Pi#1.jpg)
+![MRE-PI](MRE-Pi.jpg)
