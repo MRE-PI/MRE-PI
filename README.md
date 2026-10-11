@@ -1,5 +1,5 @@
 # Military Ready Raspberry Pi 
-##*MRE-Pi*  
+## *MRE-Pi*  
 
 Securing a Raspberry Pi to Military Standards
 Project Concept & Requirements:
