@@ -5,16 +5,19 @@ title: Home
 nav_enabled: true
 ---
 
-# Securing a Raspberry Pi to Military Standards #
+# Securing a Raspberry Pi to Military Standards  
 
-Project Requirements:  
-    [1. Follow a simplified Acquisition and Systems Engineering Process](https://www.linkedin.com/pulse/cybersecurity-process-integration-v-model-development-jadhav-dvnpc/)  
-    3. Focus on Cybersecurity and not the Platform.  The platform is tailored for specific Cybersecurity use cases.  
-    4. The platform is to be a real-world platform not a rock sitting in a safe.  
-    
-## Instantiated requirements ##
+## Project Concept & Requirements:
 
-### Hardware: ###
+1. [Follow a simplified Acquisition and Systems Engineering Process](https://www.linkedin.com/pulse/cybersecurity-process-integration-v-model-development-jadhav-dvnpc/)  
+2. Focus is on Cybersecurity and not the Platform.  
+The platform is tailored for a specific Cybersecurity use case. The goal is securing a Raspberry Pi.  The target operating system is PI OS which is a branch of Debian (as is Ubuntu).  The use case is to secure to military standards which can be significantly different from commercial standards.  The platform architecture has flexibility to become may things but this project will stay focused on Cybersecurity and not for example the many ways and versions you can install the Motion application.
+4. The platform is to be a real-world platform not a rock sitting in a safe.  
+
+## System Design  
+** Instantiated requirements**  
+
+### Hardware:  
 
 Video  Camera
 :  Video is easily implemented on the entire suite of Raspberry Pi products.  It is in effect a sensor.  It could be substituted with a microphone, a temperature sensor, etc.  
