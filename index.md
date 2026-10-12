@@ -51,20 +51,20 @@ OpenWRT WIFI Router (1)
 
 Motion v5 
 : Motion is a program that monitors the signal from video cameras and detects changes in the images.  
-NGINX
+NGINX 
 : Motion supported Webserver configuration option which after Apache Tomcat is very common  
-
 MariaDB 
 : A database supported by Motion selected because it is covered by a published Security Technical Implementation Guide (STIG)  
 
 ### Cryptography:  
 
-The Military has significant Cryptography requirements that cannot be addressed in public but there are two very basic requiremnets that can.
+The Military has significant Cryptography requirements that cannot be addressed in public but there are two very basic requiremnets that can.  
+
 Public Key Encryption
 : PKI is a requirement for all government systems.  This project implements the YUBIKey because it can meet military requirements. At this stage of the project, I do not have key-management tools architected because they are generally an enterprise level vice organization level solution.  
 
-Federal Information Processing Standards Publication 140-3 SECURITY REQUIREMENTS FOR CRYPTOGRAPHIC MODULES.  
-:FIPS 140-3 Implementation will not be addressed due to resource and time constraints. Years ago, this was a requirement that everyone struggled with, both vendor and customer.  Since that time there have been significant advances. Vendors see FIPS certification as a market advantage and Open-Source communities have stepped up to the challenge.  The benefit of effectively flipping a switch on a piece of software via money or time is limited at this stage of the project.  OpenSSL is used but without the FIPS.
+Federal Information Processing Standards Publication 140-3 SECURITY REQUIREMENTS FOR CRYPTOGRAPHIC MODULES. 
+: FIPS 140-3 Implementation will not be addressed due to resource and time constraints. Years ago, this was a requirement that everyone struggled with, both vendor and customer.  Since that time there have been significant advances. Vendors see FIPS certification as a market advantage and Open-Source communities have stepped up to the challenge.  The benefit of effectively flipping a switch on a piece of software via money or time is limited at this stage of the project.  OpenSSL is used but without the FIPS.
 
 
 
