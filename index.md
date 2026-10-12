@@ -7,6 +7,15 @@ nav_enabled: true
 
 # Securing a Raspberry Pi to Military Standards  
 
+**What and Why**
+
+War is the realm of uncertainty; three quarters of the factors on which action in war is based are wrapped in a fog of greater or lesser uncertainty. A sensitive and discriminating judgment is called for; a skilled intelligence to scent out the truth.
+
+— Carl von Clausewitz
+
+This project is and was a training exercise to remove the fog from the use of computer assets that do not fit the standard mold of enterprise assets.
+What was planned was something that could be scattered in the woods, desert, snow, to gather data yet still meet basic Military Cybersecurity requirements. What: 5 rugged assets Why: Cybersecurity Training
+
 ## Project Concept & Requirements:
 
 1. [Follow a simplified Acquisition and Systems Engineering Process](https://www.linkedin.com/pulse/cybersecurity-process-integration-v-model-development-jadhav-dvnpc/)  
