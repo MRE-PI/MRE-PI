@@ -25,6 +25,10 @@ The platform is tailored for a specific Cybersecurity use case. The goal is secu
 4. The platform is to be a real-world platform not a rock sitting in a safe.  
 
 ## System Design  
+
+Keep it simple. Sensor --> Server --> Gateway  From a cybersecurity perspective that means STIGS, Scans and PKI (see explanations in the overall project materials).  The non-trivial part is the critical thinking to achieve standard STIG and SCAN security requirements with non-standard solutions that meet System Requirements.
+
+## Software / Hardware Design  
 **Instantiated requirements**  
 
 ### Hardware:  
