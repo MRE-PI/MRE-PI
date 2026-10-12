@@ -26,7 +26,7 @@ The platform is tailored for a specific Cybersecurity use case. The goal is secu
 
 ## System Design  
 
-Keep it simple. Sensor --> Server --> Gateway  From a cybersecurity perspective that means STIGS, Scans and PKI (see explanations in the overall project materials).  The non-trivial part is the critical thinking to achieve standard STIG and SCAN security requirements with non-standard solutions that meet System Requirements.
+Keep it simple. Sensor --> Server --> Gateway  From a cybersecurity perspective that means Gateway Firewall, STIGS, Scans and PKI (see explanations in the overall project materials).  The non-trivial part is the critical thinking to achieve standard STIG and SCAN security requirements with non-standard solutions that meet System Requirements.  The tricky parts like secure-boot and parts of cryptography will be approached gently as to not create the "rock in a safe".  
 
 ## Software / Hardware Design  
 **Instantiated requirements**  
@@ -49,7 +49,8 @@ Sensors (3)
 Edge Server (1)  
 OpenWRT WIFI Router (1)  
 
-[Figure 1](https://robert-brown19.github.io/apple-pi/Figure1.html)           [Image 1](https://robert-brown19.github.io/apple-pi/Image1.html) 
+[Figure 1](https://robert-brown19.github.io/mre-pi/Figure1.html)   
+[Image 1](https://robert-brown19.github.io/mre-pi/Image1.html) 
 
 ### Software:  
 
@@ -72,5 +73,11 @@ Public Key Encryption
 Federal Information Processing Standards Publication 140-3 SECURITY REQUIREMENTS FOR CRYPTOGRAPHIC MODULES. 
 : FIPS 140-3 Implementation will not be addressed due to resource and time constraints. Years ago, this was a requirement that everyone struggled with, both vendor and customer.  Since that time there have been significant advances. Vendors see FIPS certification as a market advantage and Open-Source communities have stepped up to the challenge.  The benefit of effectively flipping a switch on a piece of software via money or time is limited at this stage of the project.  OpenSSL is used but without the FIPS.
 
+## Implementation  
 
+Away we go!!!!
+
+First download your tools and get them installed
+
+[Tools](https://robert-brown19.github.io/mre-pi/Tools.html) 
 
