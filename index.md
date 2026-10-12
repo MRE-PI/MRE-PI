@@ -21,7 +21,7 @@ The platform is tailored for a specific Cybersecurity use case. The goal is secu
 ### Hardware:  
 
 Video  Camera
-:  Video is easily implemented on the entire suite of Raspberry Pi products.  It is in effect a sensor.  It could be substituted with a microphone, a temperature sensor, etc.  
+:  Video is easily implemented on the entire suite of Raspberry Pi products.  It is in effect a sensor.  It could be substituted with a microphone, a temperature sensor, etc.  For this project qty 3 Raspberry Pi Zero 2W computers were used. I had fun with a variety of cameras & lenses.  They are dedicated to just pulling the data stream to minimize points of failure. (i.e. if you toss a dozen in the battlefield, you are not going to go back around to each of them to reboot or repair.)  The Edge Server is in the same enclave and does all the heavy lifting.  
 
 Edge architecture  
 : Communications are always a key architecture requirement for Military, whether mobility, encryption requirements.  To achieve this an Edge Server and Communications Gateway were  architected.  
@@ -31,11 +31,12 @@ Edge Server
 Communications Gateway
 : The architected intent is to have multiple channels of communications to include the myriads of versions of 4G, 5G, StarLink, & WIFI to allow distance vice speed tradeoffs without buying a new Gateway every time.  OpenWRT was selected.  It is not currently a Raspberry Pi but will be secured just the same.
 
-
-OpenWRT WIFI Router (1)  
-Edge Server (1)  
+**Asset Inventory**  
 Sensors (3)  
-[Figure 1](https://robert-brown19.github.io/apple-pi/Figure1.html)  
+Edge Server (1)  
+OpenWRT WIFI Router (1)  
+
+[Figure 1](https://robert-brown19.github.io/apple-pi/Figure1.html)  [Image 1](https://robert-brown19.github.io/apple-pi/Image1.html) 
 
 ### Software:  
 
