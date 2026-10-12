@@ -51,8 +51,10 @@ OpenWRT WIFI Router (1)
 
 Motion v5 
 : Motion is a program that monitors the signal from video cameras and detects changes in the images.  
+
 NGINX 
 : Motion supported Webserver configuration option which after Apache Tomcat is very common  
+
 MariaDB 
 : A database supported by Motion selected because it is covered by a published Security Technical Implementation Guide (STIG)  
 
