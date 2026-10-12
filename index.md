@@ -45,7 +45,7 @@ Sensors (3)
 Edge Server (1)  
 OpenWRT WIFI Router (1)  
 
-[Figure 1](https://robert-brown19.github.io/apple-pi/Figure1.html)  [Image 1](https://robert-brown19.github.io/apple-pi/Image1.html) 
+[Figure 1](https://robert-brown19.github.io/apple-pi/Figure1.html)           [Image 1](https://robert-brown19.github.io/apple-pi/Image1.html) 
 
 ### Software:  
 
