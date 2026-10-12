@@ -11,7 +11,8 @@ nav_enabled: true
 
 1. [Follow a simplified Acquisition and Systems Engineering Process](https://www.linkedin.com/pulse/cybersecurity-process-integration-v-model-development-jadhav-dvnpc/)  
 2. Focus is on Cybersecurity and not the Platform.  
-The platform is tailored for a specific Cybersecurity use case. The goal is securing a Raspberry Pi.  The target operating system is PI OS which is a branch of Debian (as is Ubuntu).  The use case is to secure to military standards which can be significantly different from commercial standards.  The platform architecture has flexibility to become may things but this project will stay focused on Cybersecurity and not for example the many ways and versions you can install the Motion application.
+The platform is tailored for a specific Cybersecurity use case. The goal is securing a Raspberry Pi.  The target operating system is PI OS which is a branch of Debian (as is Ubuntu).  The use case is to secure to military standards which can be significantly different from commercial standards.  The platform architecture has flexibility to become many things, but this project will stay focused on Cybersecurity and not for example the many ways and versions you can install the Motion application.  
+3. It should be assumed for this exercise only publicly available communications & encryption will be used. However, there are plenty of examples that can be utilized without the acquisition of a TAClane or Link16 communications.  
 4. The platform is to be a real-world platform not a rock sitting in a safe.  
 
 ## System Design  
@@ -23,10 +24,15 @@ Video  Camera
 :  Video is easily implemented on the entire suite of Raspberry Pi products.  It is in effect a sensor.  It could be substituted with a microphone, a temperature sensor, etc.  
 
 Edge architecture  
-: Communications are always a key architecture requirement for Military, whether mobility, encryption requirements.  
-It should be assumed for this exercise only publicly available communications & encryption will be used. However, there are plenty of examples that can be utilized without the acquisition of a TAClane or LinkX communications.  
+: Communications are always a key architecture requirement for Military, whether mobility, encryption requirements.  To achieve this an Edge Server and Communications Gateway were  architected.  
+Edge Server
+: Raspberry PI CM5 with NVMe Storage in a hardened enclosure
 
-WIFI Router (1)  
+Communications Gateway
+: The architected intent is to have multiple channels of communications to include the myriads of versions of 4G, 5G, StarLink, & WIFI to allow distance vice speed tradeoffs without buying a new Gateway every time.  OpenWRT was selected.  It is not currently a Raspberry Pi but will be secured just the same.
+
+
+OpenWRT WIFI Router (1)  
 Edge Server (1)  
 Sensors (3)  
 [Figure 1](https://robert-brown19.github.io/apple-pi/Figure1.html)  
