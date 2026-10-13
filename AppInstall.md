@@ -1,7 +1,7 @@
 ---
 nav_order: 11
 layout: default
-title: OS Install
+title: App Install
 parent: Implementation
 nav_enabled: true
 ---
