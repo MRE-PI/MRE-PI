@@ -2,6 +2,7 @@
 nav_order: 13
 layout: default
 title: Yubikey & Putty Setup
+parent: Implementation
 nav_enabled: true
 ---
 
@@ -14,4 +15,4 @@ There is an additional tool "yubico-piv-tool" more targeted for use on linux.  I
 
 ## Putty-CAC
 
-https://pivkey.zendesk.com/hc/en-us/articles/207698876-PIVKey-and-PuTTY-CAC-for-SSH-on-Windows
+[https://pivkey.zendesk.com/hc/en-us/articles/207698876-PIVKey-and-PuTTY-CAC-for-SSH-on-Windows]
