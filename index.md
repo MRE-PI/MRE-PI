@@ -21,7 +21,7 @@ What was planned was something that could be scattered in the woods, desert, sno
 1. [Follow a simplified Acquisition and Systems Engineering Process](https://www.linkedin.com/pulse/cybersecurity-process-integration-v-model-development-jadhav-dvnpc/)  
 2. Focus is on Cybersecurity and not the Platform.  
 The platform is tailored for a specific Cybersecurity use case. The goal is securing a Raspberry Pi.  The target operating system is PI OS which is a branch of Debian (as is Ubuntu).  The use case is to secure to military standards which can be significantly different from commercial standards.  The platform architecture has flexibility to become many things, but this project will stay focused on Cybersecurity and not for example the many ways and versions you can install the Motion application.  
-3. It should be assumed for this exercise only publicly available communications & encryption will be used. However, there are plenty of examples that can be utilized without the acquisition of a TAClane or Link16 communications.  
+3. It should be assumed for this exercise only publicly available communications & encryption will be used. Regardless, there are plenty of military equivalent examples that can be utilized without the acquisition of a TAClane or Link16 communications.  
 4. The platform is to be a real-world platform not a rock sitting in a safe.  
 
 ## System Design  
@@ -38,6 +38,7 @@ Video  Camera
 
 Edge architecture  
 : Communications are always a key architecture requirement for Military, whether mobility, encryption requirements.  To achieve this an Edge Server and Communications Gateway were  architected.  
+
 Edge Server
 : Raspberry PI CM5 with NVMe Storage in a hardened enclosure
 
