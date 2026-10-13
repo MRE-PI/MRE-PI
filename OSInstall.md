@@ -1,7 +1,8 @@
 ---
 nav_order: 12
 layout: default
-title: Home
+title: OS Install
+parent: Implementation
 nav_enabled: true
 ---
 .
