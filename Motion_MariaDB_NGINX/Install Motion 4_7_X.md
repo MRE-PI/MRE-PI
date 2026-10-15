@@ -2,6 +2,7 @@
 nav_order: 6
 layout: default
 title: Install_Motion
+parent: Implementation
 nav_enabled: true
 ---
 
