@@ -11,10 +11,10 @@ xxxxxxxxxxxxx
 ```markdown
 sudo nano /boot/config.txt
 ```
-add dtoverlay=imx219 v2 Camera
-add dtoverlay=imx477 HQ Camera
-add dtoverlay=imx296 GS Camera
-add dtoverlay=imx708 Cammera Module 3
+add dtoverlay=imx219 v2 Camera  
+add dtoverlay=imx477 HQ Camera  
+add dtoverlay=imx296 GS Camera  
+add dtoverlay=imx708 Cammera Module 3  
 ``
 xxxxxxxxxx
 ```markdown
