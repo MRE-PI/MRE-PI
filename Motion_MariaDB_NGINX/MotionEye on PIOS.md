@@ -1,3 +1,12 @@
+---
+nav_order: 6
+layout: default
+title: Install_MotionEye
+parent: Implementation
+nav_enabled: true
+---
+
+
 ##sudo nano /boot/config.txt
 add dtoverlay=imx219 v2 Camera
 add dtoverlay=imx477 HQ Camera
