@@ -34,12 +34,14 @@ I prefer without the header, but different use cases could require it.
 
 SD Cards  
 Name Brand SD cards like SanDisk are mandatory.  Off brands will cause issues and waste your time.  
+[Outdoor Security Camera SD Cards](https://www.amazon.com/SANDISK-Security-Endurance-Continuous-Recording/dp/B0HKPVDF2T/ref=ast_sto_dp_puis)
 
 NestOut Batteries  
-I highly recommend these batteries for outdoor use.  I have field tested them with great success a raspberry pi will last 36hrs unmodified on the 15K NestOut
+I highly recommend these batteries for outdoor use.  I have field tested them with great success a raspberry pi will last 36hrs unmodified on the [15K NestOut](https://nestout.com/products/outdoor-portable-battery-15000mah)  
+
 GigaPower Batteries  
-For the Gateway the wireless transmissions burn up double the power of the othe devices.  The GigaPower 30k will meet the requirement but there are other options as well (NestOut Powerstaion, Jackery Ultra)
+For the Gateway the wireless transmissions burn up double the power of the othe devices.  The [GigaPower 30k](https://www.backcountry.com/snow-peak-gigapower-battery-30000?irclickid=SmtVCAQJDxyZWtp0XUQP9wErUkr1qh0hUVMezw0&irgwc=1&afsrc=1&ircid=5311&irpid=2003851&utm_medium=Affiliate&utm_source=Bing%20Rebates%20by%20Microsoft&utm_campaign=Backcountry%20Homepage&utm_term=EdgeBingFlow&utm_content=Loyalty) will meet the requirement but there are other options as well (NestOut Powerstaion, Jackery Ultra)
 
 Recommended Cables and Cases.  
 
-YubiKey
+[YubiKey](https://www.yubico.com/product/yubikey-5-fips-140-3-series/yubikey-5c-nfc-fips-140-3/)
