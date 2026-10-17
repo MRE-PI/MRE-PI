@@ -1,7 +1,8 @@
 ---
 nav_order: 4
 layout: default
-title: OS Cfg
+title: OS Hardening
+parent: Implementation
 nav_enabled: true
 ---
 ```markdown
