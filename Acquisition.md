@@ -7,11 +7,11 @@ nav_enabled: true
 
 # Asset Procurement & Acquisition
 
-US Federal Acquisition rules can be quite complex but there are a few rules that are important
+US Federal Acquisition rules can be quite complex but there are a few rules that are important  
 TAA Compliance  
-: Required under FAR 52.225‑5 for federal procurement. Products must be either:
-U.S.‑made end products, or
-Designated‑country end products, or
+: Required under FAR 52.225‑5 for federal procurement. Products must be either:  
+U.S.‑made end products, or  
+Designated‑country end products, or  
 Foreign end products that have undergone substantial transformation in a designated country.  
 
 From a cybersecurity perspective this is especially important with respect to cryptographic infrastructure  
