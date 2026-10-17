@@ -2,7 +2,6 @@
 nav_order: 14
 layout: default
 title: Acquisition
-parent: Implementation
 nav_enabled: true
 ---
 
