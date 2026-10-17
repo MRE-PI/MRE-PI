@@ -6,6 +6,7 @@ parent: Implementation
 nav_enabled: true
 ---
 
+```markdown
 -a always,exit -F path=/usr/bin/newgrp -F perm=x -F auid>=1000 -F auid!=4294967295 -k priv_cmd  
 -a always,exit -F path=/usr/bin/chcon -F perm=x -F auid>=1000 -F auid!=4294967295 -k perm_chng  
 -a always,exit -F path=/sbin/apparmor_parser -F perm=x -F auid>=1000 -F auid!=4294967295 -k perm_chng4294967295 -k perm_chng  
@@ -62,4 +63,5 @@ nav_enabled: true
 -w /var/log/btmp -p wa -k logins  
 -w /sbin/modprobe -p x -k modules  
 -w /bin/kmod -p x -k modules  
--w /usr/sbin/fdisk -p x -k fdisk  
+-w /usr/sbin/fdisk -p x -k fdisk
+```
