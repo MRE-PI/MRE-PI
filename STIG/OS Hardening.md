@@ -102,6 +102,8 @@ copy key into file
 ```markdown
 sudo systemctl restart sshd.service
 ```
+#### *V-238371* - The Ubuntu operating system must use a file integrity tool to verify correct operation of all security functions.
+#### *V-238303* - The Ubuntu operating system must use cryptographic mechanisms to protect the integrity of audit tools.  
 ```markdown
 sudo aideinit  
 ```
@@ -109,11 +111,15 @@ sudo aideinit
 ##sudo nano /etc/pam.d/login
 ```
 session required pam_lastlog.so showfailed   
+
+#### *V-238370* - The Ubuntu operating system must be configured so that Advance Package Tool (APT) removes all software components after updated versions have been installed.  
 ```markdown
 ##sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 Unattended-Upgrade::Remove-Unused-Dependencies "true";  
 Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";  
+
+#### *V-238323* - The Ubuntu operating system must limit the number of concurrent sessions to ten for all accounts and/or account types.
 ```markdown
 ##sudo nano /etc/security/limits.conf
 ```
