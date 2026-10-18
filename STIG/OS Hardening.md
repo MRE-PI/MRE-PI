@@ -138,9 +138,10 @@ Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
 
 #### *V-238323* - The Ubuntu operating system must limit the number of concurrent sessions to ten for all accounts and/or account types.
 ```markdown
-##sudo nano /etc/security/limits.conf
+##sudo nano /etc/security/limits.conf  
 ```
-hard maxlogins 10  
+Edit record at bottom of file replacing "student" Note: "*" is part of record  
+*   hard maxlogins 10  
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
