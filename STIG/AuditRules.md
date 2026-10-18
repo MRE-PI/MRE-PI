@@ -2,7 +2,7 @@
 nav_order: 5
 layout: default
 title: Audit Rules
-parent: Implementation
+parent: OS Hardening
 nav_enabled: true
 ---
 
