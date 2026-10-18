@@ -5,7 +5,7 @@ title: OS Hardening
 parent: Implementation
 nav_enabled: true
 ---
-V-270656 Ubuntu 24.04 LTS must have the "auditd" package installed.  
+### *V-270656* Ubuntu 24.04 LTS must have the "auditd" package installed.  
 ```markdown
 sudo auditd -s enable
 ```
@@ -24,17 +24,24 @@ sudo augenrules --load
 ```markdown
 sudo chmod -R 0640 /etc/audit/rules.d
 ```
-V-238201 - The Ubuntu operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
+### *V-238201* - The Ubuntu operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
 ```markdown
 sudo cp /usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example /etc/pam_pkcs11/pam_pkcs11.conf  
 ```
+### *V-238330* - The Ubuntu operating system must disable account identifiers (individuals, groups, roles, and devices) after 35 days of inactivity.
 ```markdown
 sudo useradd -D -f 35
 ```
+### *V-238333* - The Ubuntu operating system must be configured to use TCP syncookies.
 ```markdown
 sudo nano /etc/sysctl.conf
 ```
 uncomment net.ipv4.tcp_syncookies = 1 then save file  
+
+### The following multiple V-IDs can be resolved with edits to /etc/login.defs 
+### *V-238209* - The Ubuntu operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.
+### *V-238325* - The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.
+
 ```markdown
 sudo nano /etc/login.defs  
 ```
