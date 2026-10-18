@@ -38,17 +38,21 @@ sudo nano /etc/sysctl.conf
 ```
 uncomment net.ipv4.tcp_syncookies = 1 then save file  
 
-### The following multiple V-IDs can be resolved with edits to /etc/login.defs 
-### *V-238209* - The Ubuntu operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.
-### *V-238325* - The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.
+### The following multiple V-IDs can be resolved with edits to /etc/login.defs  
+### *V-238209* - The Ubuntu operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.  
+### *V-238325* - The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.  
+### *V-238202* - The Ubuntu operating system must enforce 24 hours/1 day as the minimum password lifetime. Passwords for new users must have a 24 hours/1 day minimum password lifetime restriction.  
+### *V-238203* - The Ubuntu operating system must enforce a 60-day maximum password lifetime restriction. Passwords for new users must have a 60-day maximum password lifetime restriction.
 
 ```markdown
 sudo nano /etc/login.defs  
 ```
 Make the following edits  
 UMASK 077  
+ENCRYPT_METHOD SHA512  
 PASS_MIN_DAYS 1  
 PASS_MAX_DAYS 60  
+
 ```markdown
 sudo nano /etc/pam.d/login
 ```
