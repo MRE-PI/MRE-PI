@@ -5,7 +5,21 @@ title: OS Hardening
 parent: Implementation
 nav_enabled: true
 ---
-### *V-270656* Ubuntu 24.04 LTS must have the "auditd" package installed.  
+
+#### *V-238380* - The Ubuntu operating system must disable the x86 Ctrl-Alt-Delete key sequence.
+
+Configure the system to disable the Ctrl-Alt-Delete sequence for the command line with the following commands:
+
+```markdown
+$ sudo systemctl mask ctrl-alt-del.target
+```
+
+Reload the daemon to take effect:  
+```markdown
+$ sudo systemctl daemon-reload  
+```
+
+#### *V-270656* Ubuntu 24.04 LTS must have the "auditd" package installed.  
 ```markdown
 sudo auditd -s enable
 ```
