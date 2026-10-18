@@ -51,9 +51,9 @@ sudo useradd -D -f 35
 ```
 ### *V-238333* - The Ubuntu operating system must be configured to use TCP syncookies.
 ```markdown
-sudo nano /etc/sysctl.conf
+sudo nano /etc/sysctl.d/98-rpi.conf
 ```
-uncomment net.ipv4.tcp_syncookies = 1 then save file  
+add net.ipv4.tcp_syncookies = 1 then save file  
 
 ### The following multiple V-IDs can be resolved with edits to /etc/login.defs  
 ### *V-238209* - The Ubuntu operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.  
