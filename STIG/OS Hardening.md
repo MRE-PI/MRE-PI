@@ -5,9 +5,12 @@ title: OS Hardening
 parent: Implementation
 nav_enabled: true
 ---
+V-270656 Ubuntu 24.04 LTS must have the "auditd" package installed.  
 ```markdown
 sudo auditd -s enable
 ```
+With auditd enabled the following are additional configuration actions  
+
 ```markdown
 sudo systemctl enable auditd.service
 ```
@@ -21,6 +24,7 @@ sudo augenrules --load
 ```markdown
 sudo chmod -R 0640 /etc/audit/rules.d
 ```
+V-238201 - The Ubuntu operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
 ```markdown
 sudo cp /usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example /etc/pam_pkcs11/pam_pkcs11.conf  
 ```
