@@ -19,7 +19,10 @@ Reload the daemon to take effect:
 $ sudo systemctl daemon-reload  
 ```
 
-#### *V-270656* Ubuntu 24.04 LTS must have the "auditd" package installed.  
+#### *V-270656* Ubuntu 24.04 LTS must have the "auditd" package installed. 
+```markdown
+sudo apt install auditd
+```
 ```markdown
 sudo auditd -s enable
 ```
