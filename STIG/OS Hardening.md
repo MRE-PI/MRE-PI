@@ -59,9 +59,19 @@ sudo nano /etc/pam.d/login
 Make the following edits  
 session required pam_lastlog.so showfailed  
 +++++Remove any occurrence of "NOPASSWD" or "!authenticate" found in "/etc/sudoers" file or files in the "/etc/sudoers.d" directory.  
+
+#### *V-274859* - Ubuntu 20.04 LTS must require users to provide a password for privilege escalation.  
+check if file in /etc/sudoers.d that Include NOPASSWD
 ```markdown
 ##sudo rm /etc/sudoers.d/010_pi-nopasswd
 ```
+
+### The following multiple V-IDs can be resolved with edits to /etc/ssh/sshd_config  
+#### *V-238218* - The Ubuntu operating system must not allow unattended or automatic login via SSH.  
+#### *V-238219* - The Ubuntu operating system must be configured so that remote X connections are disabled, unless to fulfill documented and validated mission requirements.
+#### *V-238210* - The Ubuntu operating system must implement smart card logins for multifactor authentication for local and network access to privileged and nonprivileged accounts.
+#### *V-238211* - The Ubuntu operating system must use strong authenticators in establishing nonlocal maintenance and diagnostic sessions.
+
 ```markdown
 ##sudo nano /etc/ssh/sshd_config
 ```
@@ -74,6 +84,7 @@ X11UseLocalhost yes
 X11Forwarding no  
 PubkeyAuthentication yes  
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2   
+
 ```markdown
 mkdir ~/.ssh
 ```
