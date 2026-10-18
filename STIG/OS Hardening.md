@@ -68,9 +68,15 @@ check if file in /etc/sudoers.d that Include NOPASSWD
 
 ### The following multiple V-IDs can be resolved with edits to /etc/ssh/sshd_config  
 #### *V-238218* - The Ubuntu operating system must not allow unattended or automatic login via SSH.  
-#### *V-238219* - The Ubuntu operating system must be configured so that remote X connections are disabled, unless to fulfill documented and validated mission requirements.
-#### *V-238210* - The Ubuntu operating system must implement smart card logins for multifactor authentication for local and network access to privileged and nonprivileged accounts.
-#### *V-238211* - The Ubuntu operating system must use strong authenticators in establishing nonlocal maintenance and diagnostic sessions.
+#### *V-238219* - The Ubuntu operating system must be configured so that remote X connections are disabled, unless to fulfill documented and validated mission requirements.  
+#### *V-238210* - The Ubuntu operating system must implement smart card logins for multifactor authentication for local and network access to privileged and nonprivileged accounts.  
+#### *V-238211* - The Ubuntu operating system must use strong authenticators in establishing nonlocal maintenance and diagnostic sessions.  
+#### *V-238212* - The Ubuntu operating system must immediately terminate all network connections associated with SSH traffic after a period of inactivity  
+#### *V-238213* - The Ubuntu operating system must immediately terminate all network connections associated with SSH traffic at the end of the session or after 10 minutes of inactivity.  
+#### *V-238214* - The Ubuntu operating system must display the Standard Mandatory DOD Notice and Consent Banner before granting any local or remote connection to the system.
+#### *V-238216* - The Ubuntu operating system must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-2 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.  
+#### *V-238217* - The Ubuntu operating system must configure the SSH daemon to use FIPS 140-2 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.  
+#### *V-238220* - The Ubuntu operating system SSH daemon must prevent remote hosts from connecting to the proxy display.  
 
 ```markdown
 ##sudo nano /etc/ssh/sshd_config
@@ -82,6 +88,7 @@ ClientAliveCountMax 1
 ClientAliveInterval 600  
 X11UseLocalhost yes  
 X11Forwarding no  
+MACs hmac-sha2-512,hmac-sha2-256 
 PubkeyAuthentication yes  
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2   
 
