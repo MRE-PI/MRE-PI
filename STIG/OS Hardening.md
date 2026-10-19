@@ -173,6 +173,19 @@ dcredit=-1
 ocredit=-1  
 - difok=8  be cautiuos with this one  
 
+#### *V-238338* - The Ubuntu operating system must configure the /var/log directory to be group-owned by syslog   
+```markdown 
+sudo chgrp syslog /var/log
+```
+#### *V-238341* - The Ubuntu operating system must configure the /var/log/syslog file to be group-owned by adm.  
+```markdown
+sudo chgrp adm /var/log/syslog
+```
+#### *V-238343* - The Ubuntu operating system must configure /var/log/syslog file with mode 0640 or less permissive.  
+
+```markdown
+sudo chmod 0640 /var/log/syslog  
+```
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
