@@ -186,11 +186,28 @@ sudo chgrp adm /var/log/syslog
 ```markdown
 sudo chmod 0640 /var/log/syslog  
 ```
-#### *V-238348* - The Ubuntu operating system library directories must have mode 0755 or less permissive.  
+#### *V-238348*
+- The Ubuntu operating system library directories must have mode 0755 or less permissive.  
 ```markdown 
 sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;  
 ```
+#### *V-238351*  
+- The Ubuntu operating system library files must be group-owned by root or a system account.
+```markdown
+$ sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
+```
+#### *V-238353*
+- The Ubuntu operating system must be configured to preserve log records from failure events.  
 
+Install the log service (if the log service is not already installed) with the following command: 
+```markdown 
+$ sudo apt-get install rsyslog 
+```
+Enable the log service with the following command: 
+
+```markdown 
+$ sudo systemctl enable --now rsyslog
+```
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
