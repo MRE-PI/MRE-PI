@@ -148,6 +148,27 @@ Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
 ```
 Edit record at bottom of file replacing "student" Note: "*" is part of record  
 *   hard maxlogins 10  
+
+###PWQUALITY
+**Be very careful**
+#### *V-238225* - The Ubuntu operating system must enforce a minimum 15-character password length.  
+#### *V-238227* - The Ubuntu operating system must prevent the use of dictionary words for passwords.  
+#### *V-238228* - The Ubuntu operating system must be configured so that when passwords are changed or new passwords are established, pwquality must be used.  
+#### *V-238221* - The Ubuntu operating system must enforce password complexity by requiring that at least one upper-case character be used.  
+#### *V-238222* - The Ubuntu operating system must enforce password complexity by requiring that at least one lower-case character be used.  
+#### *V-238223* - The Ubuntu operating system must enforce password complexity by requiring that at least one numeric character be used.  
+  
+'''markdown
+sudo nano /etc/security/pwquality.conf  
+```
+Make the following edits  
+minlen=15  
+dictcheck=1
+enforcing = 1  
+ucredit=-1
+lcredit=-1
+dcredit=-1
+
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
