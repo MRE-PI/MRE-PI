@@ -157,6 +157,8 @@ Edit record at bottom of file replacing "student" Note: "*" is part of record
 #### *V-238221* - The Ubuntu operating system must enforce password complexity by requiring that at least one upper-case character be used.  
 #### *V-238222* - The Ubuntu operating system must enforce password complexity by requiring that at least one lower-case character be used.  
 #### *V-238223* - The Ubuntu operating system must enforce password complexity by requiring that at least one numeric character be used.  
+#### *V-238226* - The Ubuntu operating system must enforce password complexity by requiring that at least one special character be used.  
+#### *V-238224* - The Ubuntu operating system must require the change of at least 8 characters when passwords are changed.  
   
 '''markdown
 sudo nano /etc/security/pwquality.conf  
@@ -168,6 +170,8 @@ enforcing = 1
 ucredit=-1
 lcredit=-1
 dcredit=-1
+ocredit=-1  
+- difok=8  be cautiuos with this one  
 
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
