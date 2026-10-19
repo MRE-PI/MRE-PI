@@ -41,25 +41,25 @@ sudo augenrules --load
 ```markdown
 sudo chmod -R 0640 /etc/audit/rules.d
 ```
-### *V-238201* - The Ubuntu operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
+#### *V-238201* - The Ubuntu operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
 ```markdown
 sudo cp /usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example /etc/pam_pkcs11/pam_pkcs11.conf  
 ```
-### *V-238330* - The Ubuntu operating system must disable account identifiers (individuals, groups, roles, and devices) after 35 days of inactivity.
+#### *V-238330* - The Ubuntu operating system must disable account identifiers (individuals, groups, roles, and devices) after 35 days of inactivity.
 ```markdown
 sudo useradd -D -f 35
 ```
-### *V-238333* - The Ubuntu operating system must be configured to use TCP syncookies.
+#### *V-238333* - The Ubuntu operating system must be configured to use TCP syncookies.
 ```markdown
 sudo nano /etc/sysctl.d/98-rpi.conf
 ```
 add net.ipv4.tcp_syncookies = 1 then save file  
 
-### The following multiple V-IDs can be resolved with edits to /etc/login.defs  
-### *V-238209* - The Ubuntu operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.  
-### *V-238325* - The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.  
-### *V-238202* - The Ubuntu operating system must enforce 24 hours/1 day as the minimum password lifetime. Passwords for new users must have a 24 hours/1 day minimum password lifetime restriction.  
-### *V-238203* - The Ubuntu operating system must enforce a 60-day maximum password lifetime restriction. Passwords for new users must have a 60-day maximum password lifetime restriction.
+#### The following multiple V-IDs can be resolved with edits to /etc/login.defs  
+#### *V-238209* - The Ubuntu operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.  
+#### *V-238325* - The Ubuntu operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.  
+#### *V-238202* - The Ubuntu operating system must enforce 24 hours/1 day as the minimum password lifetime. Passwords for new users must have a 24 hours/1 day minimum password lifetime restriction.  
+#### *V-238203* - The Ubuntu operating system must enforce a 60-day maximum password lifetime restriction. Passwords for new users must have a 60-day maximum password lifetime restriction.
 
 ```markdown
 sudo nano /etc/login.defs  
@@ -82,8 +82,14 @@ check if file in /etc/sudoers.d that Include NOPASSWD
 ```markdown
 ##sudo rm /etc/sudoers.d/010_pi-nopasswd
 ```
+#### *V-251504* - The Ubuntu operating system must not allow accounts configured with blank or null passwords.  
+```markdown
+sudo nano /etc/pam.d/common-auth
+~~~
+Remove or comment out the line:  
+auth  [success=2 default=ignore]      pam_unix.so nullok  
 
-### The following multiple V-IDs can be resolved with edits to /etc/ssh/sshd_config  
+#### The following multiple V-IDs can be resolved with edits to /etc/ssh/sshd_config  
 #### *V-238218* - The Ubuntu operating system must not allow unattended or automatic login via SSH.  
 #### *V-238219* - The Ubuntu operating system must be configured so that remote X connections are disabled, unless to fulfill documented and validated mission requirements.  
 #### *V-238210* - The Ubuntu operating system must implement smart card logins for multifactor authentication for local and network access to privileged and nonprivileged accounts.  
@@ -96,7 +102,7 @@ check if file in /etc/sudoers.d that Include NOPASSWD
 #### *V-238220* - The Ubuntu operating system SSH daemon must prevent remote hosts from connecting to the proxy display.  
 
 ```markdown
-##sudo nano /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
 ```
 Make the following edits  
 PermitEmptyPasswords no  
