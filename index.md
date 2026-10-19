@@ -14,7 +14,8 @@ War is the realm of uncertainty; three quarters of the factors on which action i
 — Carl von Clausewitz
 
 This project is and was a training exercise to remove the fog from the use of computer assets that do not fit the standard mold of enterprise assets.
-What was planned was something that could be scattered in the woods, desert, snow, to gather data yet still meet basic Military Cybersecurity requirements. What: 5 rugged assets Why: Cybersecurity Training
+What was planned was something that could be scattered in the woods, desert, snow, to gather data yet still meet basic Military Cybersecurity requirements.  
+What: 5 rugged assets Why: Cybersecurity Training
 
 ## Project Concept & Requirements:
 
