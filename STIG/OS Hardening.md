@@ -160,7 +160,7 @@ Edit record at bottom of file replacing "student" Note: "*" is part of record
 #### *V-238226* - The Ubuntu operating system must enforce password complexity by requiring that at least one special character be used.  
 #### *V-238224* - The Ubuntu operating system must require the change of at least 8 characters when passwords are changed.  
   
-'''markdown
+```markdown
 sudo nano /etc/security/pwquality.conf  
 ```
 Make the following edits  
@@ -186,6 +186,11 @@ sudo chgrp adm /var/log/syslog
 ```markdown
 sudo chmod 0640 /var/log/syslog  
 ```
+#### *V-238348* - The Ubuntu operating system library directories must have mode 0755 or less permissive.  
+```markdown 
+sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;  
+```
+
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
