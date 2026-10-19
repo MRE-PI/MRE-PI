@@ -85,7 +85,7 @@ check if file in /etc/sudoers.d that Include NOPASSWD
 #### *V-251504* - The Ubuntu operating system must not allow accounts configured with blank or null passwords.  
 ```markdown
 sudo nano /etc/pam.d/common-auth
-~~~
+```
 Remove or comment out the line:  
 auth  [success=2 default=ignore]      pam_unix.so nullok  
 
