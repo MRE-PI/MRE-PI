@@ -205,7 +205,16 @@ sudo su -c "echo install usb-storage /bin/false >> /etc/modprobe.d/DISASTIG.conf
 ```markdown
 sudo su -c "echo blacklist usb-storage >> /etc/modprobe.d/DISASTIG.conf"
 ```
-
+#### *V-255912* - The Ubuntu operating system SSH server must be configured to use only FIPS-validated key exchange algorithms.  
+```markdown
+sudo nano /etc/ssh/sshd_config
+```
+Add "#Configure the SSH server to use only FIPS-validated key exchange algorithms" as a comment.
+Add KexAlgorithms ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256  
+Then restart sshd  
+```markdown
+sudo systemctl restart sshd
+```
 ~~~ #### *V-238353* ~~~
 ~~~ - The operating system must be configured to preserve log records from failure events.  ~~~
 
