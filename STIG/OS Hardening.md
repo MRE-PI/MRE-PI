@@ -18,6 +18,10 @@ Reload the daemon to take effect:
 ```markdown
 $ sudo systemctl daemon-reload  
 ```
+#### *V-238200* - The Ubuntu operating system must allow users to directly initiate a session lock for all connection types.  
+```markdown
+sudo apt-get install vlock  
+```
 
 #### *V-270656* 24.04 LTS must have the "auditd" package installed. 
 ```markdown
@@ -111,9 +115,13 @@ ClientAliveCountMax 1
 ClientAliveInterval 600  
 X11UseLocalhost yes  
 X11Forwarding no  
-MACs hmac-sha2-512,hmac-sha2-256 
+MACs hmac-sha2-512,hmac-sha2-256  
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr  
 PubkeyAuthentication yes  
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2   
+```markdown
+sudo systemctl restart sshd.service
+```
 
 ```markdown
 mkdir ~/.ssh
@@ -171,7 +179,24 @@ ucredit=-1
 lcredit=-1
 dcredit=-1
 ocredit=-1  
-- difok=8  be cautiuos with this one  
+- difok=8  be cautiuos with this one
+
+#### *V-238228* - The Ubuntu operating system must be configured so that when passwords are changed or new passwords are established, pwquality must be used.  
+
+```markdown
+sudo apt-get install libpam-pwquality -y
+```
+Add the following line to "/etc/security/pwquality.conf" (or modify the line to have the required value):
+```markdown
+sudo nano /etc/security/pwquality.conf  
+```
+enforcing = 1  
+
+Add the following line to "/etc/pam.d/common-password" (or modify the line to have the required value):  
+```markdown
+sudo nano /etc/pam.d/common-password  
+```
+password requisite pam_pwquality.so retry=3  
 
 #### *V-238338* - The operating system must configure the /var/log directory to be group-owned by syslog   
 Pi Os - Debian 13 (Trixie) does not use syslog.  It uses **journlctl** instead
