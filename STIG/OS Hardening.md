@@ -198,17 +198,26 @@ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
 ```markdown
 $ sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
 ```
-#### *V-238353*
-- The operating system must be configured to preserve log records from failure events.  
-
-Install the log service (if the log service is not already installed) with the following command: 
+#### *V-251505* - The Ubuntu operating system must disable automatic mounting of Universal Serial Bus (USB) mass storage driver.  
 ```markdown 
-$ sudo apt-get install rsyslog 
+sudo su -c "echo install usb-storage /bin/false >> /etc/modprobe.d/DISASTIG.conf"  
 ```
-Enable the log service with the following command: 
+```markdown
+sudo su -c "echo blacklist usb-storage >> /etc/modprobe.d/DISASTIG.conf"
+```
+
+~~~ #### *V-238353* ~~~
+~~~ - The operating system must be configured to preserve log records from failure events.  ~~~
+
+~~~Install the log service (if the log service is not already installed) with the following command: ~~~
+Raspberry Pi OS (Trixe) uses **journalctl** not syslog  
+```markdown 
+~~~$ sudo apt-get install rsyslog ~~~
+```
+~~~ Enable the log service with the following command: ~~~
 
 ```markdown 
-$ sudo systemctl enable --now rsyslog
+~~~ $ sudo systemctl enable --now rsyslog ~~~
 ```
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
