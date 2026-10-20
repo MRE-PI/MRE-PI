@@ -268,7 +268,7 @@ sudo ufw limit ssh
 #### *V-238353*
 ~~- The operating system must be configured to preserve log records from failure events.~~
 
-~~Install the log service (if the log service is not already installed) with the following command:~~
+~~Install the log service (if the log service is not already installed) with the following command:~~  
 Raspberry Pi OS (Trixe) uses **journalctl** not syslog  
 ```markdown
 $ sudo apt-get install rsyslog
@@ -298,10 +298,10 @@ auditctl -w /var/spool/cron/ -p wa -k cronjobs
 sudo augenrules --load  
 ```
 
-#### *V-238338* - The Ubuntu operating system must configure the /var/log directory to be group-owned by syslog.  
-#### *V-238341* - The Ubuntu operating system must configure the /var/log/syslog file to be group-owned by adm.  
-#### *V-238342* - The Ubuntu operating system must configure /var/log/syslog file to be owned by syslog.  
-#### *V-238343* - The Ubuntu operating system must configure /var/log/syslog file with mode 0640 or less permissive.  
+~~#### *V-238338* - The Ubuntu operating system must configure the /var/log directory to be group-owned by syslog.~~  
+~~#### *V-238341* - The Ubuntu operating system must configure the /var/log/syslog file to be group-owned by adm.~~  
+~~#### *V-238342* - The Ubuntu operating system must configure /var/log/syslog file to be owned by syslog.~~  
+~~#### *V-238343* - The Ubuntu operating system must configure /var/log/syslog file with mode 0640 or less permissive.~~  
 *Pi OS Trixie does not use syslog.  It uses journalctl instead.*   
 
 #### *V-238348* - The Ubuntu operating system library directories must have mode 0755 or less permissive.
