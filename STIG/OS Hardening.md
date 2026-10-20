@@ -6,7 +6,7 @@ parent: Implementation
 nav_enabled: true
 ---
 
-** #### *V-238380* - The  operating system must disable the x86 Ctrl-Alt-Delete key sequence. **
+#### ** *V-238380* - The  operating system must disable the x86 Ctrl-Alt-Delete key sequence. **
 
 Configure the system to disable the Ctrl-Alt-Delete sequence for the command line with the following commands:
 
