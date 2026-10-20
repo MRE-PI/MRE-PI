@@ -167,21 +167,23 @@ Edit record at bottom of file replacing "student" Note: "*" is part of record
 #### *V-238223* - The operating system must enforce password complexity by requiring that at least one numeric character be used.  
 #### *V-238226* - The operating system must enforce password complexity by requiring that at least one special character be used.  
 #### *V-238224* - The operating system must require the change of at least 8 characters when passwords are changed.  
-  
+#### *V-238228* - The Ubuntu operating system must be configured so that when passwords are changed or new passwords are established, pwquality must be used.  
+
 ```markdown
 sudo nano /etc/security/pwquality.conf  
 ```
 Make the following edits  
 minlen=15  
-dictcheck=1
+dictcheck=1  
 enforcing = 1  
-ucredit=-1
-lcredit=-1
-dcredit=-1
+ucredit=-1  
+lcredit=-1  
+dcredit=-1  
 ocredit=-1  
+enforcing = 1  
 - difok=8  be cautiuos with this one
 
-#### *V-238228* - The Ubuntu operating system must be configured so that when passwords are changed or new passwords are established, pwquality must be used.  
+
 
 ```markdown
 sudo apt-get install libpam-pwquality -y
@@ -190,7 +192,7 @@ Add the following line to "/etc/security/pwquality.conf" (or modify the line to 
 ```markdown
 sudo nano /etc/security/pwquality.conf  
 ```
-enforcing = 1  
+  
 
 Add the following line to "/etc/pam.d/common-password" (or modify the line to have the required value):  
 ```markdown
@@ -279,6 +281,24 @@ Raspberry Pi OS (Trixe) uses **journalctl** not syslog
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
+
+#### *V-238337* - The Ubuntu operating system must generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries.
+```markdown 
+sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exec chmod 640 '{}' \;  
+```
+
+#### *V-238338* - The Ubuntu operating system must configure the /var/log directory to be group-owned by syslog.  
+#### *V-238341* - The Ubuntu operating system must configure the /var/log/syslog file to be group-owned by adm.  
+#### *V-238342* - The Ubuntu operating system must configure /var/log/syslog file to be owned by syslog.  
+#### *V-238343* - The Ubuntu operating system must configure /var/log/syslog file with mode 0640 or less permissive.  
+*Pi OS Trixie does not use syslog.  It uses journalctl instead.*   
+
+#### *V-238348* - The Ubuntu operating system library directories must have mode 0755 or less permissive.
+fox-admin@PiMotion412:/usr/sbin $ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
+find: ‘/lib64’: No such file or directory
+
+
+
 
 makestep 1 -1  
 ```markdown
