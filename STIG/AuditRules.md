@@ -30,7 +30,7 @@ nav_enabled: true
 -a always,exit -F arch=b32 -S execve -C uid!=euid -F euid=0 -F key=execpriv  
 -a always,exit -F arch=b32 -S execve -C gid!=egid -F egid=0 -F key=execpriv  
 -a always,exit -F arch=b32 -S unlink,unlinkat,rename,renameat,rmdir -F auid>=1000 -F auid!=4294967295 -k delete  
--a always,exit -F arch=b64 -S unlinkat,renameat -F auid>=1000 -F auid!=4294967295 -k delete  
+-a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat,rmdir -F auid>=1000 -F auid!=4294967295 -k delete  
 -a always,exit -F arch=b32 -S setxattr,fsetxattr,lsetxattr,removexattr,fremovexattr,lremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod  
 -a always,exit -F arch=b32 -S setxattr,fsetxattr,lsetxattr,removexattr,fremovexattr,lremovexattr -F auid=0 -k perm_mod  
 -a always,exit -F arch=b64 -S setxattr,fsetxattr,lsetxattr,removexattr,fremovexattr,lremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod  
