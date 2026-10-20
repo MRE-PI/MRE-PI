@@ -215,6 +215,29 @@ Then restart sshd
 ```markdown
 sudo systemctl restart sshd
 ```
+#### *V-238360* - The Ubuntu operating system must be configured to use AppArmor.  
+```markdown
+sudo apt-get install apparmor
+```
+```markdown
+sudo systemctl enable apparmor.service 
+```
+```markdown
+sudo systemctl start apparmor.service 
+```
+#### *V-238354* - The Ubuntu operating system must have an application firewall installed in order to control remote access methods.  
+
+```markdown
+sudo apt-get install ufw
+```
+#### *V-238367* - The Ubuntu operating system must configure the uncomplicated firewall to rate-limit impacted network interfaces.  
+```markdown
+sudo ufw limit http
+```
+```markdown
+sudo ufw limit ssh  
+```
+  
 ~~~ #### *V-238353* ~~~
 ~~~ - The operating system must be configured to preserve log records from failure events.  ~~~
 
