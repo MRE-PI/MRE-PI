@@ -265,15 +265,15 @@ sudo ufw limit http
 sudo ufw limit ssh  
 ```
   
-~~~ #### *V-238353* ~~~
-~~~ - The operating system must be configured to preserve log records from failure events.  ~~~
+#### *V-238353*
+~~- The operating system must be configured to preserve log records from failure events.~~
 
-~~~Install the log service (if the log service is not already installed) with the following command: ~~~
+~~Install the log service (if the log service is not already installed) with the following command:~~
 Raspberry Pi OS (Trixe) uses **journalctl** not syslog  
-```markdown 
-~~~$ sudo apt-get install rsyslog ~~~
+```markdown
+$ sudo apt-get install rsyslog
 ```
-~~~ Enable the log service with the following command: ~~~
+~~Enable the log service with the following command:~~
 
 ```markdown 
 ~~~ $ sudo systemctl enable --now rsyslog ~~~
@@ -285,6 +285,17 @@ Raspberry Pi OS (Trixe) uses **journalctl** not syslog
 #### *V-238337* - The Ubuntu operating system must generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries.
 ```markdown 
 sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exec chmod 640 '{}' \;  
+```
+#### *V-274852* - Ubuntu 20.04 LTS must audit any script or executable called by cron as root or by any privileged user.
+```markdown
+sudo nano /etc/audit/rules.d/audit.rules  
+```
+Add
+#Configure the Trixie  operating system to audit the execution of any system call made by cron as root or as any privileged user.  
+auditctl -w /etc/cron.d/ -p wa -k cronjobs   
+auditctl -w /var/spool/cron/ -p wa -k cronjobs  
+```markdown 
+sudo augenrules --load  
 ```
 
 #### *V-238338* - The Ubuntu operating system must configure the /var/log directory to be group-owned by syslog.  
