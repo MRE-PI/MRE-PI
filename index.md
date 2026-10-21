@@ -15,7 +15,7 @@ War is the realm of uncertainty; three quarters of the factors on which action i
 
 This project is and was a training exercise to remove the fog from the use of computer assets that do not fit the standard mold of enterprise assets.
 What was planned was something that could be scattered in the woods, desert, snow, to gather data yet still meet basic Military Cybersecurity requirements.  
-          What: 5 rugged assets          Why: Cybersecurity Training
+          **What: 5 rugged assets**          **Why: Cybersecurity Training**  
 
 ## Project Concept & Requirements:
 
@@ -44,7 +44,7 @@ Edge Server
 : Raspberry PI CM5 with NVMe Storage in a hardened enclosure
 
 Communications Gateway
-: The architected intent is to have multiple channels of communications to include the myriads of versions of 4G, 5G, StarLink, & WIFI to allow distance vice speed tradeoffs without buying a new Gateway every time.  OpenWRT was selected.  It is not currently a Raspberry Pi but will be secured just the same.
+: The architected intent is to have multiple channels of communications to include the myriads of versions of 4G, 5G, StarLink, & WIFI to allow distance vice speed tradeoffs without buying a new Gateway every time.  OpenWRT was selected.  It is not currently a Raspberry Pi nor Pi OS but will be secured just the same.  OpenWRT can be installed on Raspberry Pi hardware, but Wireless signal performance engineering for Pi hardware does not meet our project "Simple" requirement.
 
 **Asset Inventory**  
 Sensors (3)  
@@ -60,10 +60,10 @@ Motion v5
 : Motion is a program that monitors the signal from video cameras and detects changes in the images.  
 
 NGINX 
-: Motion supported Webserver configuration option which after Apache Tomcat is very common  
+: Motion supported Webserver configuration option which after Apache Tomcat is very common. A Disa Stig is available.  
 
 MariaDB 
-: A database supported by Motion selected because it is covered by a published Security Technical Implementation Guide (STIG)  
+: A database supported by Motion selected because it is covered by a published Security Technical Implementation Guide (STIG). A Disa Stig is available  
 
 ### Cryptography:  
 
