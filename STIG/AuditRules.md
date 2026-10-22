@@ -63,4 +63,5 @@ nav_enabled: true
 -w /sbin/modprobe -p x -k modules  
 -w /bin/kmod -p x -k modules  
 -w /usr/sbin/fdisk -p x -k fdisk
+-w /var/log/journal -p wa -k systemd_journal  
 ```
