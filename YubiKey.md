@@ -1,5 +1,5 @@
 ---
-nav_order: 13
+nav_order: 3
 layout: default
 title: Yubikey & Putty Setup
 parent: Implementation
