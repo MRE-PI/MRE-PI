@@ -324,6 +324,22 @@ sudo apt install -y aide
 ```markdown
 sudo nano /etc/default/aide
 ```
+#### *V-270831* - Ubuntu 24.04 LTS must use cryptographic mechanisms to protect the integrity of audit tools.  
+```markdown
+sudo nano /etc/aide/aide.conf  
+```
+append to file  
+```markdown
+# Audit Tools 
+/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/auditd p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/ausearch p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/aureport p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/autrace p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/augenrules p+i+n+u+g+s+b+acl+xattrs+sha512  
+```
+
+
 remove the comment mark # from "SILENTREPORTS=no"
 
 ~~```markdown
