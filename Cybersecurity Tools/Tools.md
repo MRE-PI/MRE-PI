@@ -14,4 +14,4 @@ I wiill be using
 
 ## Laptop/Desktop
 
-You will need a dedicated laptop for the project as a whole and to load the above software.  A laptop is recommended for the mobility it provides but I have successfully used a desktop as well.  What I don't recommend is a computer that undergoes frequent change such as student classroom computers, nor do I recommend using a corporate or government computer that has strict controls on it.  Most of the work is via SSH PUTTY so that even older computers will be sufficient. 
+You will need a dedicated laptop for the project on which to load the above software.  A laptop is recommended for the mobility but I have successfully used a desktop as well.  What I don't recommend is a computer that undergoes frequent change such as student classroom computers, nor do I recommend using a corporate or government computer that has strict controls on it.  Most of the work is via SSH PUTTY so that even older computers will be sufficient as long as they meet the reqiurements of Nessus Essentials and SCAP Compliance Checker (SCC)
