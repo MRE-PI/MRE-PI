@@ -47,6 +47,7 @@ sudo chmod -R 0640 /etc/audit/rules.d
 ```
 
 #### *V-270757* - Ubuntu 24.04 LTS must generate system journal entries without revealing information that could be exploited by adversaries.  
+Create the following new file:  
 ```markdown
 sudo vi /etc/tmpfiles.d/zzz-systemd-stig.conf
 ```
