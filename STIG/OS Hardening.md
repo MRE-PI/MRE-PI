@@ -39,13 +39,18 @@ sudo systemctl enable auditd.service
 sudo nano /etc/audit/rules.d/stig.rules
 ```
 create/copy/paste audit rules.txt  
-```markdown
-sudo augenrules --load
-```
+
 ```markdown
 sudo chmod -R 0640 /etc/audit/rules.d
 ```
-
+#### *V-270657* - Ubuntu 24.04 LTS must produce audit records and reports containing information to establish when, where, what type, the source, and the outcome for all DOD-defined auditable events and actions in near real time. 
+```markdown
+sudo systemctl enable auditd.service  
+```
+**To reload the rules file, issue the following command:**  
+```markdown
+sudo augenrules --load
+```
 #### *V-270757* - Ubuntu 24.04 LTS must generate system journal entries without revealing information that could be exploited by adversaries.  
 Create the following new file:  
 ```markdown
