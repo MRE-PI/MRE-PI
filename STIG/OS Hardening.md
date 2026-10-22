@@ -349,6 +349,15 @@ append to file
 
 remove the comment mark # from "SILENTREPORTS=no"
 
+#### *V-270680* - Ubuntu 24.04 LTS must automatically terminate a user session after inactivity timeouts have expired.  
+```markdown
+sudo nano /etc/profile.d/99-terminal_tmout.sh
+```
+add to file
+```markdown
+TMOUT=600
+```
+
 ~~```markdown
 ~~sudo systemctl enable --now rsyslog~~
 ```~~
