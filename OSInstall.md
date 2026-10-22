@@ -1,5 +1,5 @@
 ---
-nav_order: 12
+nav_order: 2
 layout: default
 title: OS Install
 parent: Implementation
