@@ -65,5 +65,6 @@ nav_enabled: true
 -w /usr/sbin/fdisk -p x -k fdisk  
 -w /var/log/journal -p wa -k systemd_journal-a always,exit -F path=/sbin/apparmor_parser -F perm=x -F auid>=1000 -F auid!=->  
 -w /etc/sudoers -p wa -k privilege_modification  
+-w /etc/sudoers.d -p wa -k privilege_modification 
 
 ```
