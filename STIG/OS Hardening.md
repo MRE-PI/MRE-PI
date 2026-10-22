@@ -307,7 +307,24 @@ root L 04/08/2024 0 99999 7 -1
 ```markdown
 sudo chmod 740 /usr/bin/journalctl
 ```
-#### *
+#### *V-270827* - Ubuntu 24.04 LTS must be configured so that audit log files are not read or write-accessible by unauthorized users.  
+```markdown
+sudo chmod 0600 /var/log/audit/*
+```
+#### *V-270829* - Ubuntu 24.04 LTS must permit only authorized groups ownership of the audit log files.  
+```markdown
+sudo sed -i '/^log_group/D' /etc/audit/auditd.conf
+sudo sed -i /^log_file/a'log_group = root' /etc/audit/auditd.conf
+```
+#### *V-270649* - Ubuntu 24.04 LTS must use a file integrity tool to verify correct operation of all security functions.  
+```markdown
+sudo apt install -y aide
+```
+#### *V-270652* - Ubuntu 24.04 LTS must notify designated personnel if baseline configurations are changed in an unauthorized manner. The file integrity tool must notify the system administrator (SA) when changes to the baseline configuration or anomalies in the operation of any security functions are discovered. 
+```markdown
+sudo nano /etc/default/aide
+```
+remove the comment mark # from "SILENTREPORTS=no"
 
 ~~```markdown
 ~~sudo systemctl enable --now rsyslog~~
