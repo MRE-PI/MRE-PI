@@ -45,6 +45,20 @@ sudo augenrules --load
 ```markdown
 sudo chmod -R 0640 /etc/audit/rules.d
 ```
+
+#### *V-270757* - Ubuntu 24.04 LTS must generate system journal entries without revealing information that could be exploited by adversaries.  
+```markdown
+sudo vi /etc/tmpfiles.d/zzz-systemd-stig.conf
+```
+Edit and add
+```markdown
+z /run/log/journal 0640 root systemd-journal - -
+Z /run/log/journal/%m ~0640 root systemd-journal - -
+z /var/log/journal 0640 root systemd-journal - -
+z /var/log/journal/%m 0640 root systemd-journal - -
+z /var/log/journal/%m/system.journal 0640 root systemd-journal - -
+```
+
 #### *V-238201* - The operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
 ```markdown
 sudo cp /usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example /etc/pam_pkcs11/pam_pkcs11.conf  
