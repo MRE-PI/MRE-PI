@@ -270,14 +270,33 @@ sudo ufw limit ssh
 
 ~~Install the log service (if the log service is not already installed) with the following command:~~  
 Raspberry Pi OS (Trixe) uses **journalctl** not syslog  
-```markdown
-$ sudo apt-get install rsyslog
-```
+~~```markdown~~
+--sudo apt-get install rsyslog--
+~~```~~
 ~~Enable the log service with the following command:~~
 
-```markdown 
-~~~ $ sudo systemctl enable --now rsyslog ~~~
+#### *V-270725* - Ubuntu 24.04 LTS must store only encrypted representations of passwords.  
+```markdown
+sudo nano /etc/pam.d/common-password
 ```
+Edit or change to as follows:
+password [success=1 default=ignore] pam_unix.so obscure sha512 shadow rounds=100000  
+
+#### *V-270724* - Ubuntu 24.04 LTS must prevent direct login to the root account.  
+Missleading result from sudo passwd -S root returns
+root L 2025-12-04 0 99999 7 -1
+Instead of the Ubuntu Result
+root L 04/08/2024 0 99999 7 -1 
+
+#### *V-270758* - Ubuntu 24.04 LTS must be configured so that the "journalctl" command is not accessible by unauthorized users.  
+```markdown
+sudo chmod 740 /usr/bin/journalctl
+```
+#### *
+
+~~```markdown
+~~sudo systemctl enable --now rsyslog~~
+```~~
 ```markdown 
 ++##sudo nano /etc/chrony/chrony.conf
 ```
