@@ -314,6 +314,8 @@ sudo chmod 0600 /var/log/audit/*
 #### *V-270829* - Ubuntu 24.04 LTS must permit only authorized groups ownership of the audit log files.  
 ```markdown
 sudo sed -i '/^log_group/D' /etc/audit/auditd.conf
+```
+```markdown
 sudo sed -i /^log_file/a'log_group = root' /etc/audit/auditd.conf
 ```
 #### *V-270649* - Ubuntu 24.04 LTS must use a file integrity tool to verify correct operation of all security functions.  
