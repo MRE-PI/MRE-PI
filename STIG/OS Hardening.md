@@ -367,7 +367,7 @@ TMOUT=600
 sudo nano  /etc/rsyslog.d/50-default.conf
 ```
 Add
-'''markdown
+```markdown
 auth.*,authpriv.* /var/log/secure 
 daemon.* /var/log/messages 
 ```
@@ -395,6 +395,16 @@ By using this IS (which includes any device attached to this IS), you consent to
 -This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy. 
 
 -Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details." 
+
+```
+sudo nano /etc/ssh/sshd_config  
+Modify  
+"#Banner none" to "Banner /etc/issue.net"  
+
+xxxxxxxxxxxxxxxxxxx
+
+```markdown
+
 
 ```
 
