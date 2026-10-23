@@ -55,6 +55,24 @@ sudo systemctl enable auditd.service
 ```markdown
 sudo augenrules --load
 ```
+#### *V-270765* - Ubuntu 24.04 LTS must configure the /var/log directory to be group-owned by syslog.  
+#### *V-270768* - Ubuntu 24.04 LTS must configure the /var/log/syslog file to be group-owned by adm.  
+#### *V-270769* - Ubuntu 24.04 LTS must configure /var/log/syslog file to be owned by syslog.  
+#### *V-270770* - Ubuntu 24.04 LTS must configure /var/log/syslog file with mode "0640" or less permissive.  
+
+```markdown
+sudo chgrp syslog /var/log  
+```
+```markdown
+sudo chgrp adm /var/log/syslog  
+```
+```markdown
+sudo chown syslog /var/log/syslog  
+```
+```markdown
+sudo chmod 0640 /var/log/syslog  
+```
+
 #### *V-270757* - Ubuntu 24.04 LTS must generate system journal entries without revealing information that could be exploited by adversaries.  
 Create the following new file:  
 ```markdown
@@ -414,11 +432,12 @@ For this project add port 8080
 ````markdown
 sudo ufw limit 8080  
 ```
-~~```markdown
-~~sudo systemctl enable --now rsyslog~~
-```~~
+
+```markdown
+sudo systemctl enable --now rsyslog
+```
 ```markdown 
-++##sudo nano /etc/chrony/chrony.conf
+sudo nano /etc/chrony/chrony.conf
 ```
 
 #### *V-238337* - The Ubuntu operating system must generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries.
