@@ -67,6 +67,6 @@ nav_enabled: true
 -w /etc/sudoers -p wa -k privilege_modification  
 -w /etc/sudoers.d -p wa -k privilege_modification
 -w /var/log/sudo.log -p wa -k maintenance
-
+-e 2
 
 ```
