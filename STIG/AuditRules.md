@@ -62,9 +62,11 @@ nav_enabled: true
 -w /var/log/btmp -p wa -k logins  
 -w /sbin/modprobe -p x -k modules  
 -w /bin/kmod -p x -k modules  
--w /usr/sbin/fdisk -p x -k fdisk  
+-w /usr/sbin/fdisk -p x -k fdisk
 -w /var/log/journal -p wa -k systemd_journal-a always,exit -F path=/sbin/apparmor_parser -F perm=x -F auid>=1000 -F auid!=->  
 -w /etc/sudoers -p wa -k privilege_modification  
--w /etc/sudoers.d -p wa -k privilege_modification 
+-w /etc/sudoers.d -p wa -k privilege_modification
+-w /var/log/sudo.log -p wa -k maintenance
+
 
 ```
