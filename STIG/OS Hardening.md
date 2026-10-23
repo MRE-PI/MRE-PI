@@ -89,8 +89,16 @@ z /var/log/journal/%m/system.journal 0640 root systemd-journal - -
 
 #### *V-238201* - The operating system must map the authenticated identity to the user or group account for PKI-based authentication. If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11/pam_pkcs11.conf", find an example to copy into place and modify accordingly at "/usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example.gz".  
 ```markdown
-sudo cp /usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example /etc/pam_pkcs11/pam_pkcs11.conf  
+sudo cp /usr/share/doc/libpam-pkcs11/examples/pam_pkcs11.conf.example /etc/pam_pkcs11/pam_pkcs11.conf
 ```
+#### *V-270663* - Ubuntu 24.04 LTS must use the "SSSD" package for multifactor authentication services.  
+```markdown
+sudo systemctl enable sssd.service 
+```
+```markdown
+sudo systemctl start sssd.service 
+```
+
 #### *V-238330* - The operating system must disable account identifiers (individuals, groups, roles, and devices) after 35 days of inactivity.
 ```markdown
 sudo useradd -D -f 35
