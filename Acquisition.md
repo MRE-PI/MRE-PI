@@ -7,7 +7,7 @@ nav_enabled: true
 ---
 
 # Asset Procurement & Acquisition
-### Unfortunately, due to world events procurment is the most difficult part of replicating this project.  The AI explosion and realworld Warfare has made all circuitboards and memory difficult to obtain. Oldtimers such as myself and some academic environments may have equipment on hand, otherwise tools such as [RPILocator](https://rpilocator.com) are your best bet.  
+### Unfortunately, due to world events, procurment is the most difficult part of replicating this project.  The AI explosion and realworld Warfare has made all circuitboards and memory difficult to obtain. Oldtimers such as myself and some academic environments may have equipment on hand, otherwise tools such as [RPILocator](https://rpilocator.com) are your best bet.  
 
 US Federal Acquisition rules can be quite complex but there are a few rules that are important  
 
