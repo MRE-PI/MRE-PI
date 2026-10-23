@@ -444,18 +444,6 @@ sudo nano /etc/chrony/chrony.conf
 ```markdown 
 sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exec chmod 640 '{}' \;  
 ```
-#### *V-274852* - Ubuntu 20.04 LTS must audit any script or executable called by cron as root or by any privileged user.
-```markdown
-sudo nano /etc/audit/rules.d/audit.rules  
-```
-Add
-#Configure the Trixie  operating system to audit the execution of any system call made by cron as root or as any privileged user.  
-auditctl -w /etc/cron.d/ -p wa -k cronjobs   
-auditctl -w /var/spool/cron/ -p wa -k cronjobs  
-```markdown 
-sudo augenrules --load  
-```
-
 #### *V-238348* - The Ubuntu operating system library directories must have mode 0755 or less permissive.
 fox-admin@PiMotion412:/usr/sbin $ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
 **find: ‘/lib64’: No such file or directory**
