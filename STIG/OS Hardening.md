@@ -401,13 +401,19 @@ sudo nano /etc/ssh/sshd_config
 Modify  
 "#Banner none" to "Banner /etc/issue.net"  
 
-xxxxxxxxxxxxxxxxxxx
+#### *V-270754* - Ubuntu 24.04 LTS must configure the uncomplicated firewall to rate-limit impacted network interfaces.  
 
 ```markdown
-
-
+sudo ufw enable  
 ```
-
+List current ufw rules  
+```markdown
+sudo ufw status verbose
+```
+For this project add port 8080
+````markdown
+sudo ufw limit 8080  
+```
 ~~```markdown
 ~~sudo systemctl enable --now rsyslog~~
 ```~~
