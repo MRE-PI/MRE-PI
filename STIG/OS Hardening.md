@@ -24,8 +24,9 @@ sudo apt-get install vlock
 ```
 
 #### *V-270656* 24.04 LTS must have the "auditd" package installed. 
+#### *V-270653* - Ubuntu 24.04 LTS must be configured to preserve log records from failure events.  
 ```markdown
-sudo apt install auditd
+sudo apt install auditd rsyslog -y
 ```
 ```markdown
 sudo auditd -s enable
@@ -34,6 +35,9 @@ With auditd enabled the following are additional configuration actions
 
 ```markdown
 sudo systemctl enable auditd.service
+```
+```markdown
+sudo systemctl enable --now rsyslog
 ```
 ```markdown
 sudo nano /etc/audit/rules.d/stig.rules
