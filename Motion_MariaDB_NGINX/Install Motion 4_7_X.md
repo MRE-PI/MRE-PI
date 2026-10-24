@@ -33,40 +33,48 @@ sudo dpkg -i bookworm_motionplus_0.2.1-1_armhf.deb
 
 sudo dpkg -i bookworm_motionplus_0.2.1-1_amd64.deb  
 
-sudo mariadb
-GRANT ALL ON *.* TO 'motiondb'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-exit
+```markdown
+sudo mariadb  
+```
+GRANT ALL ON *.* TO 'motiondb'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;  
+FLUSH PRIVILEGES;  
+exit  
 
-mariadb -u motiondb -p
-password
-create database motionplus;
-use motionplus;
-quit;
-
-database_type mariadb
-database_dbname motionplus
-database_host localhost
-database_port 3306
-database_user motiondb
-database_password password
-
-sudo systemctl status MariaDB
-
-sudo nano /etc/nginx/nginx.conf
-
+```markdown
+mariadb -u motiondb -p  
+```
+Enter password  
+```markdown
+create database motionplus;  
+use motionplus;  
+quit;  
+```
+Add to Motion.conf
+```markdown
+database_type mariadb  
+database_dbname motionplus  
+database_host localhost  
+database_port 3306  
+database_user motiondb  
+database_password password  
+```
+sudo systemctl status MariaDB  
+```markdown
+sudo nano /etc/nginx/nginx.conf  
+```
+```markdown
 rtmp {
 server {
-    listen 1935;
-    timeout 60s;
-    notify_method post;
-    chunk_size 4096;
+    listen 1935;  
+    timeout 60s;  
+    notify_method post;  
+    chunk_size 4096;  
 
-application pi {
-live on;
-record off;
+application pi {  
+live on;  
+record off;  
         }
 }
 }
-
+```
 
