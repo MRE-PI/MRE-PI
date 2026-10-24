@@ -440,6 +440,11 @@ For this project add port 8080
 ```markdown
 sudo ufw limit 8080  
 ```
+#### *V-274868* - Ubuntu 24.04 LTS must require users to provide a password for privilege escalation.  
+```markdown
+sudo find /etc/sudoers /etc/sudoers.d -type f -exec sed -i '/NOPASSWD/ s/^/# /g' {} \;  
+```
+
 
 ```markdown
 sudo systemctl enable --now rsyslog
