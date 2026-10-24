@@ -131,11 +131,6 @@ Make the following edits
 session required pam_lastlog.so showfailed  
 +++++Remove any occurrence of "NOPASSWD" or "!authenticate" found in "/etc/sudoers" file or files in the "/etc/sudoers.d" directory.  
 
-#### *V-274859* - 20.04 LTS must require users to provide a password for privilege escalation.  
-check if file in /etc/sudoers.d that Include NOPASSWD
-```markdown
-##sudo rm /etc/sudoers.d/010_pi-nopasswd
-```
 #### *V-251504* - The operating system must not allow accounts configured with blank or null passwords.  
 ```markdown
 sudo nano /etc/pam.d/common-auth
