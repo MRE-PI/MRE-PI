@@ -11,12 +11,12 @@ nav_enabled: true
 Configure the system to disable the Ctrl-Alt-Delete sequence for the command line with the following commands:
 
 ```markdown
-$ sudo systemctl mask ctrl-alt-del.target
+sudo systemctl mask ctrl-alt-del.target
 ```
 
 Reload the daemon to take effect:  
 ```markdown
-$ sudo systemctl daemon-reload  
+sudo systemctl daemon-reload  
 ```
 #### *V-238200* - The Ubuntu operating system must allow users to directly initiate a session lock for all connection types.  
 ```markdown
@@ -268,7 +268,7 @@ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
 #### *V-238351*  
 - The operating system library files must be group-owned by root or a system account.
 ```markdown
-$ sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
+sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
 ```
 #### *V-251505* - The Ubuntu operating system must disable automatic mounting of Universal Serial Bus (USB) mass storage driver.  
 ```markdown 
