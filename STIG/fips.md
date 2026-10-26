@@ -1,3 +1,11 @@
+---
+nav_order: 4
+layout: default
+title: OS STIG
+parent: Home
+nav_enabled: true
+---
+
 Additional info WRT to FIPS 140-3
 =================================
 
