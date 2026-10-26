@@ -73,7 +73,7 @@ Public Key Encryption
 : PKI is a requirement for all government systems.  This project implements the YUBIKey because it can meet military requirements. At this stage of the project, I do not have key-management tools architected because they are generally an enterprise level vice organization level solution.  
 
 Federal Information Processing Standards Publication 140-3 SECURITY REQUIREMENTS FOR CRYPTOGRAPHIC MODULES. 
-: FIPS 140-3 Implementation will not be addressed due to resource and time constraints. Years ago, this was a requirement that everyone struggled with, both vendor and customer.  Since that time there have been significant advances. Vendors see FIPS certification as a market advantage and Open-Source communities have stepped up to the challenge.  The benefit of effectively flipping a switch on a piece of software via money or time is limited at this stage of the project.  OpenSSL is used but without the FIPS.
+: FIPS 140-3 Implementation will not be addressed due to resource and time constraints. Years ago, this was a requirement that everyone struggled with, both vendor and customer.  Since that time there have been significant advances. Vendors see FIPS certification as a market advantage and Open-Source communities have stepped up to the challenge.  The benefit of effectively flipping a switch on a piece of software via money or time is limited at this stage of the project.  OpenSSL is used but without the FIPS. [See FIPS Additional Info](https://mre-pi.com/STIG/fips.html)  
 
 ## Implementation  
 
