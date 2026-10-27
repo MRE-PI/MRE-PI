@@ -1,7 +1,7 @@
 ---
 nav_order: 4
 layout: default
-title: OS STIG
+title: FIPS 140-3
 parent: Home
 nav_enabled: true
 ---
