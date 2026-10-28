@@ -27,7 +27,7 @@ V-270744 - Ubuntu 24.04 LTS must implement NIST FIPS-validated cryptography
 **check text** /proc/sys/crypto/fips_enabled is an example of a distro/kernel-level FIPS indicator  
 *but it is not what this OpenSSL/Pi OS Trixie repo is using.*  
 
-Th OpenSSL repo is using a provider model, not a Linux sysctl check  
+The *OpenSSL/Pi OS Trixie repo* is using a provider model, not a Linux sysctl check  
 If using Ubuntu 24.04 for this project the FIPs module is only availabel in the Pro version ($) and [not compatible with Raspberry Pi](https://github.com/canonical/ubuntu-pro-client/issues/3336)  
 The Ubuntu Server package for Raspberry Pi is an additional 2/3 larger than the Pi OS Lite Package.  
 
