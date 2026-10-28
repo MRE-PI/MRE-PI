@@ -19,14 +19,10 @@ Reload the daemon to take effect:
 sudo systemctl daemon-reload  
 ```
 #### *V-238200* - The Ubuntu operating system must allow users to directly initiate a session lock for all connection types.  
-```markdown
-sudo apt-get install vlock  
-```
-
 #### *V-270656* 24.04 LTS must have the "auditd" package installed. 
 #### *V-270653* - Ubuntu 24.04 LTS must be configured to preserve log records from failure events.  
 ```markdown
-sudo apt install auditd rsyslog -y
+sudo apt install vlock auditd rsyslog -y
 ```
 ```markdown
 sudo auditd -s enable
