@@ -387,8 +387,9 @@ Add
 auth.*,authpriv.* /var/log/secure 
 daemon.* /var/log/messages 
 ```
-sudo systemctl restart rsyslog.service  if needed
-
+```markdown
+sudo systemctl restart rsyslog.service  
+```
 #### *V-270691* - Ubuntu 24.04 LTS must display the Standard Mandatory DOD Notice and Consent Banner before granting access to via an SSH logon.
 This is purely a placeholder.  It is modified to identify the system as a training system
 ```markdown
