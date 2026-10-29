@@ -29,7 +29,8 @@ Ubuntu 24.04 LTS STIG Audit Rules
 -a always,exit -F arch=b64 -S init_module,finit_module -F auid>=1000 -F auid!=-1 -k module_chng  
 -a always,exit -F arch=b32 -S delete_module -F auid>=1000 -F auid!=-1 -k module_chng  
 -a always,exit -F arch=b64 -S delete_module -F auid>=1000 -F auid!=-1 -k module_chng  
--a always,exit -F arch=b64 -S execve -C uid!=euid -F euid=0 -F key=execpriv  -a always,exit -F arch=b64 -S execve -C gid!=egid -F egid=0 -F key=execpriv  
+-a always,exit -F arch=b64 -S execve -C uid!=euid -F euid=0 -F key=execpriv
+-a always,exit -F arch=b64 -S execve -C gid!=egid -F egid=0 -F key=execpriv  
 -a always,exit -F arch=b32 -S execve -C uid!=euid -F euid=0 -F key=execpriv  
 -a always,exit -F arch=b32 -S execve -C gid!=egid -F egid=0 -F key=execpriv  
 #-a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat,rmdir -F auid>=1000 -F auid!=-1 -k delete 
