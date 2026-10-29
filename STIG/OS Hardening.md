@@ -232,37 +232,26 @@ ocredit=-1
 enforcing = 1  
 - difok=8  be cautiuos with this one
 
-
-
-```markdown
-sudo apt-get install libpam-pwquality -y
-```
-Add the following line to "/etc/security/pwquality.conf" (or modify the line to have the required value):
-```markdown
-sudo nano /etc/security/pwquality.conf  
-```
-  
-
 Add the following line to "/etc/pam.d/common-password" (or modify the line to have the required value):  
 ```markdown
 sudo nano /etc/pam.d/common-password  
 ```
 password requisite pam_pwquality.so retry=3  
 
-#### *V-238338* - The operating system must configure the /var/log directory to be group-owned by syslog   
+#### *V-270765* - The operating system must configure the /var/log directory to be group-owned by syslog   
 Pi Os - Debian 13 (Trixie) does not use syslog.  It uses **journlctl** instead
 ```markdown 
-~~sudo chgrp syslog /var/log~~
+sudo chgrp syslog /var/log
 ```
-#### *V-238341* - The operating system must configure the /var/log/syslog file to be group-owned by adm.  
+#### *V-270768* - The operating system must configure the /var/log/syslog file to be group-owned by adm.  
 Pi Os - Debian 13 (Trixie) does not use syslog.  It uses **journlctl** instead
 ```markdown
-~~sudo chgrp adm /var/log/syslog~~
+sudo chgrp adm /var/log/syslog
 ```
-#### *V-238343* - The operating system must configure /var/log/syslog file with mode 0640 or less permissive.  
+#### *V-270770* - The operating system must configure /var/log/syslog file with mode 0640 or less permissive.  
 Pi Os - Debian 13 (Trixie) does not use syslog.  It uses **journlctl** instead
 ```markdown
-~~sudo chmod 0640 /var/log/syslog~~  
+sudo chmod 0640 /var/log/syslog  
 ```
 #### *V-238348*
 - The operating system library directories must have mode 0755 or less permissive.  
