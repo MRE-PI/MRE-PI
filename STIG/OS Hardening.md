@@ -131,8 +131,8 @@ PASS_MAX_DAYS 60
 sudo nano /etc/pam.d/login
 ```
 Make the following edits  
-session required pam_lastlog.so showfailed  
-+++++Remove any occurrence of "NOPASSWD" or "!authenticate" found in "/etc/sudoers" file or files in the "/etc/sudoers.d" directory.  
+~~session required pam_lastlog.so showfailed~~  
+~~+++++Remove any occurrence of "NOPASSWD" or "!authenticate" found in "/etc/sudoers" file or files in the "/etc/sudoers.d" directory.~~  
 
 #### *V-251504* - The operating system must not allow accounts configured with blank or null passwords.  
 ```markdown
