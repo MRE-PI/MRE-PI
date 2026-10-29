@@ -25,6 +25,9 @@ sudo systemctl daemon-reload
 sudo apt install vlock auditd rsyslog -y
 ```
 ```markdown
+sudo apt install sssd opensc libpam-pkcs11 ufw libpam-pwquality apparmor pcscd pcsc-tools aide chrony -y
+```
+```markdown
 sudo auditd -s enable
 ```
 With auditd enabled the following are additional configuration actions  
@@ -103,7 +106,11 @@ sudo useradd -D -f 35
 ```markdown
 sudo nano /etc/sysctl.d/98-rpi.conf
 ```
-add net.ipv4.tcp_syncookies = 1 then save file  
+add 
+``markdown
+net.ipv4.tcp_syncookies = 1
+```
+then save file  
 
 #### The following multiple V-IDs can be resolved with edits to /etc/login.defs  
 #### *V-238209* - The operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.  
