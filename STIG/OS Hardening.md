@@ -107,7 +107,7 @@ sudo useradd -D -f 35
 sudo nano /etc/sysctl.d/98-rpi.conf
 ```
 add 
-``markdown
+```markdown
 net.ipv4.tcp_syncookies = 1
 ```
 then save file  
