@@ -6,6 +6,9 @@ parent: OS Hardening
 nav_enabled: true
 ---
 
+Ubuntu 24.04 LTS STIG Audit Rules
+==================================
+
 ```markdown
 -a always,exit -F path=/usr/bin/newgrp -F perm=x -F auid>=1000 -F auid!=4294967295 -k priv_cmd  
 -a always,exit -F path=/usr/bin/chcon -F perm=x -F auid>=1000 -F auid!=4294967295 -k perm_chng  
