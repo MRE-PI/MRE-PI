@@ -443,7 +443,7 @@ sudo systemctl enable --now rsyslog
 sudo nano /etc/chrony/chrony.conf
 ```
 
-#### *V-238337* - The Ubuntu operating system must generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries.
+#### *V-270756* - The Ubuntu operating system must generate error messages that provide information necessary for corrective actions without revealing information that could be exploited by adversaries.
 ```markdown 
 sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exec chmod 640 '{}' \;  
 ```
