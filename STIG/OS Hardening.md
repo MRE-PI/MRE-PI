@@ -186,11 +186,10 @@ sudo systemctl restart sshd.service
 ```markdown
 sudo aideinit  
 ```
-~~```markdown
 ~~sudo nano /etc/pam.d/login~~
 
 ~~session required pam_lastlog.so showfailed~~
-```
+
 #### *V-270773* - The operating system must be configured so that Advance Package Tool (APT) removes all software components after updated versions have been installed.  
 ```markdown
 ##sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
