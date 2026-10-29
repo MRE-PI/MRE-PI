@@ -452,7 +452,4 @@ fox-admin@PiMotion412:/usr/sbin $ sudo find /lib /lib64 /usr/lib -perm /022 -typ
 **find: ‘/lib64’: No such file or directory**
 
 
-makestep 1 -1  
-```markdown
-##sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exec chmod 640 '{}' \;  
-```
+
