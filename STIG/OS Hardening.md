@@ -263,7 +263,7 @@ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
 ```markdown
 sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
 ```
-#### *V-251505* - The Ubuntu operating system must disable automatic mounting of Universal Serial Bus (USB) mass storage driver.  
+#### *V-270718* - The Ubuntu operating system must disable automatic mounting of Universal Serial Bus (USB) mass storage driver.  
 ```markdown 
 sudo su -c "echo install usb-storage /bin/false >> /etc/modprobe.d/DISASTIG.conf"  
 ```
@@ -280,10 +280,10 @@ Then restart sshd
 ```markdown
 sudo systemctl restart sshd
 ```
-#### *V-238360* - The Ubuntu operating system must be configured to use AppArmor.  
-```markdown
+#### *V-270660* - The Ubuntu operating system must be configured to use AppArmor.  
+
 sudo apt-get install apparmor
-```
+
 ```markdown
 sudo systemctl enable apparmor.service 
 ```
@@ -292,9 +292,9 @@ sudo systemctl start apparmor.service
 ```
 #### *V-238354* - The Ubuntu operating system must have an application firewall installed in order to control remote access methods.  
 
-```markdown
+
 sudo apt-get install ufw
-```
+
 #### *V-238367* - The Ubuntu operating system must configure the uncomplicated firewall to rate-limit impacted network interfaces.  
 ```markdown
 sudo ufw limit http
