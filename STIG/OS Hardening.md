@@ -199,10 +199,12 @@ Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";
 
 #### *V-270677* - The operating system must limit the number of concurrent sessions to ten for all accounts and/or account types.
 ```markdown
-##sudo nano /etc/security/limits.conf  
+sudo nano /etc/security/limits.conf  
 ```
 Edit record at bottom of file replacing "student" Note: "*" is part of record  
+```markdown
 *   hard maxlogins 10  
+```
 
 ###PWQUALITY
 **Be very careful**
