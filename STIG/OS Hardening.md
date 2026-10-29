@@ -128,7 +128,7 @@ PASS_MIN_DAYS 1
 PASS_MAX_DAYS 60  
 
 ```markdown
-sudo nano /etc/pam.d/login
+~~sudo nano /etc/pam.d/login~~
 ```
 Make the following edits  
 ~~session required pam_lastlog.so showfailed~~  
@@ -186,10 +186,10 @@ sudo systemctl restart sshd.service
 ```markdown
 sudo aideinit  
 ```
-```markdown
-##sudo nano /etc/pam.d/login
+~~```markdown
+~~sudo nano /etc/pam.d/login~~
 ```
-session required pam_lastlog.so showfailed   
+~~session required pam_lastlog.so showfailed~~   
 
 #### *V-238370* - The operating system must be configured so that Advance Package Tool (APT) removes all software components after updated versions have been installed.  
 ```markdown
@@ -198,7 +198,7 @@ session required pam_lastlog.so showfailed
 Unattended-Upgrade::Remove-Unused-Dependencies "true";  
 Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";  
 
-#### *V-238323* - The operating system must limit the number of concurrent sessions to ten for all accounts and/or account types.
+#### *V-270677* - The operating system must limit the number of concurrent sessions to ten for all accounts and/or account types.
 ```markdown
 ##sudo nano /etc/security/limits.conf  
 ```
