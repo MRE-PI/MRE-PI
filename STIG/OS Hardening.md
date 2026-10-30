@@ -479,6 +479,8 @@ sudo nano /etc/ssh/ssh_config
 ```markdown
 MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
 ```
-
-
+#### *V-270820* - Ubuntu 24.04 LTS must record time stamps for audit records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).  
+```markdown
+sudo timedatectl set-timezone UTC
+```
 
