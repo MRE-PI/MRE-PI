@@ -341,8 +341,12 @@ sudo chmod 0600 /var/log/audit/*
 ```markdown
 sudo sed -i '/^log_group/D' /etc/audit/auditd.conf
 ```
+You must complete the following before moving on  
 ```markdown
 sudo sed -i /^log_file/a'log_group = root' /etc/audit/auditd.conf
+```
+```markdown
+sudo systemctl kill auditd -s SIGHUP
 ```
 #### *V-270649* - Ubuntu 24.04 LTS must use a file integrity tool to verify correct operation of all security functions.  
 ```markdown
