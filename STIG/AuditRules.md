@@ -51,10 +51,10 @@ Ubuntu 24.04 LTS STIG Audit Rules
 -a always,exit -F path=/usr/bin/sudo -F perm=x -F auid>=1000 -F auid!=1 -k priv_cmd  
 -a always,exit -F path=/usr/bin/sudoedit -F perm=x -F auid>=1000 -F auid!=1 -k priv_cmd  
 -a always,exit -F path=/usr/bin/chsh -F perm=x -F auid>=1000 -F auid!=1 -k priv_cmd  
--a always,exit -F path=/bin/su -F perm=x -F auid>=1000 -F auid!=1 -k privileged-priv_change  
--a always,exit -F path=/usr/bin/chfn -F perm=x -F auid>=1000 -F auid!=1 -k privileged-chfn  
--a always,exit -F path=/usr/bin/mount -F perm=x -F auid>=1000 -F auid!=1 -k privileged-mount  
--a always,exit -F path=/usr/bin/umount -F perm=x -F auid>=1000 -F auid!=1 -k privileged-umount  
+-a always,exit -F path=/bin/su -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-priv_change  
+-a always,exit -F path=/usr/bin/chfn -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-chfn  
+-a always,exit -F path=/usr/bin/mount -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-mount  
+-a always,exit -F path=/usr/bin/umount -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-umount  
 -a always,exit -F path=/usr/bin/ssh-agent -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-ssh  
 -a always,exit -F path=/usr/lib/openssh/ssh-keysign -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-ssh  
 -w /etc/passwd -p wa -k usergroup_modification  
