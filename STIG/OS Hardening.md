@@ -469,7 +469,16 @@ sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exe
 ```
 #### *V-238348* - The Ubuntu operating system library directories must have mode 0755 or less permissive.
 fox-admin@PiMotion412:/usr/sbin $ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
-**find: ‘/lib64’: No such file or directory**
+**find: ‘/lib64’: No such file or directory**  Created Manually above  
+
+#### *V-270671* - Ubuntu 24.04 LTS SSH client must be configured to use only Message Authentication Codes (MACs) employing FIPS 140-3 validated cryptographic hash algorithms.  
+
+```markdown
+sudo nano /etc/ssh/ssh_config
+```
+```markdown
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+```
 
 
 
