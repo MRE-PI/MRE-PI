@@ -79,7 +79,9 @@ sudo nano /etc/tmpfiles.d/zzz-systemd-stig.conf
 ```
 Edit and add
 ```markdown
+z /run/log/journal 0640 root systemd-journal - -
 Z /run/log/journal/%m ~0640 root systemd-journal - -
+z /var/log/journal 0640 root systemd-journal - -
 z /var/log/journal/%m 0640 root systemd-journal - -
 z /var/log/journal/%m/system.journal 0640 root systemd-journal - -
 
