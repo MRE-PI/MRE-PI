@@ -327,9 +327,10 @@ Raspberry Pi OS (Trixe) uses **journalctl** not syslog
 ```markdown
 sudo nano /etc/pam.d/common-password
 ```
-Edit or change to as follows:
+Edit or change to as follows:  
+```markdown
 password [success=1 default=ignore] pam_unix.so obscure sha512 shadow rounds=100000  
-
+```
 #### *V-270724* - Ubuntu 24.04 LTS must prevent direct login to the root account.  
 Missleading result from sudo passwd -S root returns
 root L 2025-12-04 0 99999 7 -1
