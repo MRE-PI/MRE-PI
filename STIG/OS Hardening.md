@@ -445,6 +445,10 @@ For this project add port 8080
 ```markdown
 sudo ufw limit 8080  
 ```
+For this project add port 25
+```markdown
+sudo ufw deny out 25  
+```
 #### *V-274868* - Ubuntu 24.04 LTS must require users to provide a password for privilege escalation.  
 ```markdown
 sudo find /etc/sudoers /etc/sudoers.d -type f -exec sed -i '/NOPASSWD/ s/^/# /g' {} \;  
