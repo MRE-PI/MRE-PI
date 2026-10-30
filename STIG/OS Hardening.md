@@ -73,6 +73,7 @@ sudo chmod 0640 /var/log/syslog
 ```
 
 #### *V-270757* - Ubuntu 24.04 LTS must generate system journal entries without revealing information that could be exploited by adversaries.  
+#### *V-270762* - Ubuntu 24.04 LTS must configure the files used by the system journal to be group-owned by "systemd-journal".  
 Create the following new file:  
 ```markdown
 sudo nano /etc/tmpfiles.d/zzz-systemd-stig.conf
