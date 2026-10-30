@@ -9,6 +9,8 @@ nav_enabled: true
 Ubuntu 24.04 LTS STIG Audit Rules
 ==================================
 
+/etc/audit/rules.d/stig.rules
+==============================
 ```markdown
 -a always,exit -F path=/usr/bin/newgrp -F perm=x -F auid>=1000 -F auid!=-1 -k priv_cmd  
 -a always,exit -F path=/usr/bin/chcon -F perm=x -F auid>=1000 -F auid!=-1 -k perm_chng  
@@ -77,4 +79,11 @@ Ubuntu 24.04 LTS STIG Audit Rules
 -w /var/spool/cron/ -p wa -k cronjobs
 #-e 2
 
+```
+/etc/audit/rules.d/audit.rules
+=============================
+```markdown
+-w /etc/cron.d/ -p wa -k cronjobs
+-w /var/spool/cron/ -p wa -k cronjobs
+#-e 2
 ```
