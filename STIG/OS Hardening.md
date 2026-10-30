@@ -268,7 +268,7 @@ Create empty directories
 sudo mkdir /usr/lib64
 ```
 ```markdown
-sudo mkdir /lib64
+sudo ln -s /usr/lib64 /lib64
 ```
 ```markdown
 sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
