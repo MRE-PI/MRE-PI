@@ -48,9 +48,9 @@ Ubuntu 24.04 LTS STIG Audit Rules
 #-a always,exit -F arch=b64 -S setxattr,fsetxattr,lsetxattr,removexattr,fremovexattr,lremovexattr -F auid>=1000 -F auid!=-1 -k perm_mod 
 #-a always,exit -F arch=b64 -S setxattr,fsetxattr,lsetxattr,removexattr,fremovexattr,lremovexattr -F auid=0 -k perm_mod 
 
--a always,exit -F path=/usr/bin/sudo -F perm=x -F auid>=1000 -F auid!=1 -k priv_cmd  
--a always,exit -F path=/usr/bin/sudoedit -F perm=x -F auid>=1000 -F auid!=1 -k priv_cmd  
--a always,exit -F path=/usr/bin/chsh -F perm=x -F auid>=1000 -F auid!=1 -k priv_cmd  
+-a always,exit -F path=/usr/bin/sudo -F perm=x -F auid>=1000 -F auid!=-1 -k priv_cmd  
+-a always,exit -F path=/usr/bin/sudoedit -F perm=x -F auid>=1000 -F auid!=-1 -k priv_cmd  
+-a always,exit -F path=/usr/bin/chsh -F perm=x -F auid>=1000 -F auid!=-1 -k priv_cmd  
 -a always,exit -F path=/bin/su -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-priv_change  
 -a always,exit -F path=/usr/bin/chfn -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-chfn  
 -a always,exit -F path=/usr/bin/mount -F perm=x -F auid>=1000 -F auid!=-1 -k privileged-mount  
