@@ -261,8 +261,15 @@ sudo chmod 0640 /var/log/syslog
 ```markdown 
 sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;  
 ```
-#### *V-238351*  
-- The operating system library files must be group-owned by root or a system account.
+#### *V-270699*  
+- The operating system library files must be group-owned by root or a system account.  
+Create empty directories
+```markdown
+sudo mkdir /usr/lib64
+```
+```markdown
+sudo mkdir /lib64
+```
 ```markdown
 sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root -exec chown :root {} +  
 ```
