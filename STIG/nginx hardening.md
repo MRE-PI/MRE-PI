@@ -35,9 +35,12 @@ sudo nano /etc/nginx/nginx.conf
 Under  # SSL Settings add  
 ```markdown
 ssl_ciphers 'TLS_AES_256_GCM_SHA384:TLS_AES_128_GCM_SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECD>
-ssl_prefer_server_ciphers
+ssl_prefer_server_ciphers on;
 ```
- on # Force server cipher order.
+ # Force reload server cipher order.
+ ```markdown
+ sudo nginx -t && sudo systemctl reload nginx
+ ```
 
 #### *V-278408* - The NGINX service account must be configured to lock changes to the password.  
 
