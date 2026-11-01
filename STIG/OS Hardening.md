@@ -483,4 +483,13 @@ MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,h
 ```markdown
 sudo timedatectl set-timezone UTC
 ```
+#### *V-270749* - Ubuntu 24.04 LTS must restrict access to the kernel message buffer.  
+
+```markdown
+sudo nano /etc/sysctl.d/98-rpi.conf
+```
+Add
+```markdown
+kernel.dmesg_restrict = 1
+```
 
