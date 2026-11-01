@@ -268,6 +268,9 @@ Create empty directories
 sudo mkdir /usr/lib64
 ```
 ```markdown
+sudo chmod 755 /usr/lib64
+```
+```markdown
 sudo ln -s /usr/lib64 /lib64
 ```
 ```markdown
