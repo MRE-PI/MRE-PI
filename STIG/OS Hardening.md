@@ -477,8 +477,18 @@ fox-admin@PiMotion412:/usr/sbin $ sudo find /lib /lib64 /usr/lib -perm /022 -typ
 sudo nano /etc/ssh/ssh_config
 ```
 ```markdown
-MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256  
 ```
+#### *V-270706* - Ubuntu 24.04 LTS must enforce a delay of at least four seconds between logon prompts following a failed logon attempt.  
+```markdown
+sudo nano /etc/pam.d/common-auth
+```
+Add
+```markdown
+# Enforce a delay of at least four seconds between logon prompts following a failed logon attempt
+auth required pam_faildelay.so delay=4000000
+```
+
 #### *V-270820* - Ubuntu 24.04 LTS must record time stamps for audit records that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).  
 ```markdown
 sudo timedatectl set-timezone UTC
