@@ -25,8 +25,7 @@ sudo systemctl daemon-reload
 sudo apt install vlock auditd rsyslog -y
 ```
 ```markdown
-sudo apt install sssd opensc libpam-pkcs11 ufw libpam-pwquality apparmor pcscd pcsc-tools yubikey-manager
- aide chrony -y
+sudo apt install sssd opensc libpam-pkcs11 ufw libpam-pwquality apparmor pcscd pcsc-tools aide chrony -y
 ```
 ```markdown
 sudo auditd -s enable
