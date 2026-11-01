@@ -1,3 +1,11 @@
+---
+nav_order: 5
+layout: default
+title: Secure Boot
+parent: OS Hardening
+nav_enabled: true
+---
+
 Raspberry Pi Zero 2 W Secure Boot Provisioning  
 ===============================================
 The Raspberry Pi Zero 2 W cannot be provisioned for secure boot because it lacks the required hardware (EEPROM and secure boot firmware) and is explicitly unsupported by the official Secure Boot Provisioner 
