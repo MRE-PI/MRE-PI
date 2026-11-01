@@ -371,12 +371,12 @@ sudo nano /etc/aide/aide.conf
 append to file  
 ```markdown
 # Audit Tools 
-/s bin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512  
-/s bin/auditd p+i+n+u+g+s+b+acl+xattrs+sha512  
-/s bin/ausearch p+i+n+u+g+s+b+acl+xattrs+sha512  
-/s bin/aureport p+i+n+u+g+s+b+acl+xattrs+sha512  
-/s bin/autrace p+i+n+u+g+s+b+acl+xattrs+sha512  
-/s bin/augenrules p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/auditd p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/ausearch p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/aureport p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/autrace p+i+n+u+g+s+b+acl+xattrs+sha512  
+/sbin/augenrules p+i+n+u+g+s+b+acl+xattrs+sha512  
 ```
 #### *V-270652* - Ubuntu 24.04 LTS must notify designated personnel if baseline configurations are changed in an unauthorized manner. The file integrity tool must notify the system administrator (SA) when changes to the baseline configuration or anomalies in the operation of any security functions are discovered.  
 ```markdown
