@@ -17,17 +17,19 @@ Raspberry Pi connect is not installed due to the security implications but is a 
 Sensor Requirements
 ===================
 The sensor is based on a Raspberry PI Zero 2W  
-Its only additional requirements are as follows:  
+After PI OS Lite is installed and booted on the device, its only additional requirements are as follows:  
 
-A clean update
+First, a clean update
 ```markdown
 sudo apt update && sudo apt full-upgrade -y
 ```
-and 
+and second,
 ```markdown
 sudo apt install ffmpeg
 ```
+ffmpeg is not a small install  
 
+Once completed the sensor device can proceed to [OS Hardening](https://mre-pi.com/STIG/OS%20Hardening.html)  
 
 Edge Server Requirements
 ========================
