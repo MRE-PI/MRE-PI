@@ -104,16 +104,6 @@ sudo systemctl start sssd.service
 ```markdown
 sudo useradd -D -f 35
 ```
-#### *V-238333* - The operating system must be configured to use TCP syncookies.
-```markdown
-sudo nano /etc/sysctl.d/98-rpi.conf
-```
-add 
-```markdown
-net.ipv4.tcp_syncookies = 1
-```
-then save file  
-
 #### The following multiple V-IDs can be resolved with edits to /etc/login.defs  
 #### *V-238209* - The operating system default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.  
 #### *V-238325* - The operating system must encrypt all stored passwords with a FIPS 140-2 approved cryptographic hashing algorithm.  
@@ -513,4 +503,12 @@ Add
 ```markdown
 kernel.dmesg_restrict = 1
 ```
-
+#### *V-238333* - The operating system must be configured to use TCP syncookies.
+```markdown
+sudo nano /etc/sysctl.d/98-rpi.conf
+```
+add 
+```markdown
+net.ipv4.tcp_syncookies = 1
+```
+then save file  
