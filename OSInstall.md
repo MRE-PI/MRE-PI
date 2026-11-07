@@ -18,6 +18,7 @@ Sensor Requirements
 ===================
 The sensor is based on a Raspberry PI Zero 2W  
 Its only additional requirements are as follows:  
+
 A clean update
 ```markdown
 sudo apt update && sudo apt full-upgrade -y
