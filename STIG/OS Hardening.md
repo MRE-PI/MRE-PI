@@ -124,10 +124,15 @@ then save file
 sudo nano /etc/login.defs  
 ```
 Make the following edits  
-UMASK 077  
 ENCRYPT_METHOD SHA512  
 PASS_MIN_DAYS 1  
 PASS_MAX_DAYS 60  
+
+Append to /etc/login.defs  file
+```markdown
+# V-270716 - Ubuntu 24.04 LTS default filesystem permissions must be defined in such a way that all authenticated users can read and modify only their own files.
+UMASK 077
+```
 
 ~~```markdown
 ~~sudo nano /etc/pam.d/login~~
