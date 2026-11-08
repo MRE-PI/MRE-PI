@@ -292,8 +292,16 @@ Then restart sshd
 sudo systemctl restart sshd
 ```
 #### *V-270660* - The Ubuntu operating system must be configured to use AppArmor.  
-
+```makdown
 sudo apt-get install apparmor
+```
+```markdown
+sudo nano /boot/firmware/cmdline.txt
+```
+prepend to the firstline (thershould only be one line in the file when done) 
+```markdown
+apparmor=1 security=apparmor lsm=apparmor
+```
 
 ```markdown
 sudo systemctl enable apparmor.service 
