@@ -147,8 +147,7 @@ auth  [success=2 default=ignore]      pam_unix.so nullok
 #### *V-238213* - The operating system must immediately terminate all network connections associated with SSH traffic at the end of the session or after 10 minutes of inactivity.  
 #### *V-238214* - The operating system must display the Standard Mandatory DOD Notice and Consent Banner before granting any local or remote connection to the system.
 #### *V-270668* - Ubuntu 24.04 LTS must configure the SSH daemon to use Message Authentication Codes (MACs) employing FIPS 140-3 approved cryptographic hashes to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.  
-#### *V-270669* - Ubuntu 24.04 LTS SSH server must be configured to use only FIPS 140-3 validated key exchange algorithms.   
-#### *V-270670* - Ubuntu 24.04 LTS must configure the SSH client to use FIPS 140-3 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.  
+#### *V-270669* - Ubuntu 24.04 LTS SSH server must be configured to use only FIPS 140-3 validated key exchange algorithms.  
 #### *V-238217* - The operating system must configure the SSH daemon to use FIPS 140-2 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission.  
 #### *V-238220* - The operating system SSH daemon must prevent remote hosts from connecting to the proxy display.  
 
@@ -162,9 +161,8 @@ ClientAliveCountMax 1
 ClientAliveInterval 600  
 X11UseLocalhost yes  
 X11Forwarding no  
-MACs hmac-sha2-512,hmac-sha2-256  
-Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes128-ctr
-KexAlgorithms ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256  
+KexAlgorithms ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group14-sha256  
 PubkeyAuthentication yes  
 AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2   
 ```markdown
@@ -487,10 +485,15 @@ sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -exe
 fox-admin@PiMotion412:/usr/sbin $ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;
 **find: ‘/lib64’: No such file or directory**  Created Manually above  
 
+  
+#### *V-270670* - Ubuntu 24.04 LTS must configure the SSH client to use FIPS 140-3 approved ciphers to prevent the unauthorized disclosure of information and/or detect changes to information during transmission. 
 #### *V-270671* - Ubuntu 24.04 LTS SSH client must be configured to use only Message Authentication Codes (MACs) employing FIPS 140-3 validated cryptographic hash algorithms.  
 
 ```markdown
 sudo nano /etc/ssh/ssh_config
+```
+```markdown
+Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes128-ctr
 ```
 ```markdown
 MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256  
