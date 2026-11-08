@@ -443,6 +443,13 @@ List current ufw rules
 ```markdown
 sudo ufw status verbose
 ```
+Warning:Do not skip this step other wise ssh is diabled after next reboot
+```markdown
+sudo ufw limit ssh
+```
+```markdown
+sudo ufw limit smtp
+```
 For this project add port 8080
 ```markdown
 sudo ufw limit 8080  
