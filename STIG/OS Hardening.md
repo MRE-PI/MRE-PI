@@ -408,7 +408,7 @@ sudo nano  /etc/rsyslog.d/50-default.conf
 ```
 Add
 ```markdown
-auth.* authpriv.* /var/log/secure 
+auth.*,authpriv.* /var/log/secure
 daemon.* /var/log/messages 
 ```
 ```markdown
