@@ -533,3 +533,15 @@ add
 net.ipv4.tcp_syncookies = 1
 ```
 then save file  
+
+
+Stop and be carful about the next steps
+=======================================
+Make sure you have updated your password to meet all STIG requirements  
+#### *V-270729* - Ubuntu 24.04 LTS must require the change of at least eight characters when passwords are changed.  
+```markdown
+sudo nano /etc/security/pwquality.conf
+```
+update  
+difok=8
+
