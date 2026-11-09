@@ -410,6 +410,9 @@ auth.*,authpriv.* /var/log/secure
 daemon.* /var/log/messages 
 ```
 ```markdown
+sudo chmod 644 /etc/rsyslog.d/50-default.conf
+```
+```markdown
 sudo systemctl restart rsyslog.service  
 ```
 #### *V-270691* - Ubuntu 24.04 LTS must display the Standard Mandatory DOD Notice and Consent Banner before granting access to via an SSH logon.
