@@ -545,3 +545,13 @@ sudo nano /etc/security/pwquality.conf
 update  
 difok=8
 
+The next step is to pass the STIG without configuring a central syslog server
+
+#### *V-270765* - Ubuntu 24.04 LTS must configure the /var/log directory to be group-owned by syslog.  
+#### *V-270769* - Ubuntu 24.04 LTS must configure /var/log/syslog file to be owned by syslog.  
+```markdown
+sudo groupadd syslog  
+```
+```markdown
+sudo adduser syslog --ingroup syslog --disabled-login --disabled-password  
+```
