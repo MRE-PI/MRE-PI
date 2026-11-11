@@ -1,3 +1,7 @@
+
+Results: Medium Severity (CAT I)  
+================================
+
 ### V-270675 - Ubuntu 24.04 LTS when booted must require authentication upon booting into single-user and maintenance mo des. - Fail
 Not a typical feature on Raspberry Pi as it boots from an easily removeable SD Card.  Furth methods will be researched.  Physical protections would function as a mitigation. Locks, Tamper Detection, etc.
 ### V-270714 - Ubuntu 24.04 LTS must not allow accounts configured in Pluggable Authentication Modules (PAM) with blank or null passwords. - Fail
@@ -5,8 +9,10 @@ Fixed?
 ### V-270736 - Ubuntu 24.04 LTS must map the authenticated identity to the user or group account for PKI-based authentication. - Fail
 Requires LDAP and full enterprise PKI implementation with CA and revocation checking. Out of scope
 ### V-270744 - Ubuntu 24.04 LTS must implement NIST FIPS-validated cryptography to protect classified information and for the following: To provision digital signatures, to generate cryptographic hashes, and to protect unclassified information requiring confidentiality and cryptographic protection in accordance with applicable federal laws, Executive Orders, directives, policies, regulations, and standards. - Fail
-FIPS discussed in detail. Requires full enterprise PKI implementation with CA and revocation checking. Out of scope
-###Results: Medium Severity (CAT II)
+FIPS discussed in detail. Requires full enterprise PKI implementation with CA and revocation checking. Out of scope  
+
+Results: Medium Severity (CAT II)  
+=================================
  
 ### V-270663 - Ubuntu 24.04 LTS must use the "SSSD" package for multifactor authentication services. - Fail
 Requires full enterprise PKI implementation with CA and revocation checking. Out of scope
@@ -43,8 +49,10 @@ Raspberry PI does not have this feature in Pi Zero 2W but maybe Pi 4, 5
 chown, chmod, creat, ulink are commands and not callable functions in PI OS TRIXIE 
 
 ### V-274870 - Ubuntu 24.04 LTS must audit any script or executable called by cron as root or by any privileged user. - Fail
-An error in the SCC code or unknow issue with PI OS implementation
+An error in the SCC code or unknow issue with PI OS implementation  
+
 Results: Low Severity (CAT III)
+===============================
 
 ### V-270645 - Ubuntu 24.04 LTS must not have the "systemd-timesyncd" package installed. - Fail
 Needs to be researched
