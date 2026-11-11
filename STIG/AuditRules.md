@@ -77,11 +77,10 @@ Ubuntu 24.04 LTS STIG Audit Rules
 -w /var/log/sudo.log -p wa -k maintenance
 -w /etc/cron.d/ -p wa -k cronjobs
 -w /var/spool/cron/ -p wa -k cronjobs
-#-e 2
 
 ```
-/etc/audit/rules.d/audit.rules
-=============================
+/etc/audit/rules.d/audit.rules  
+=============================  
 ```markdown
 -w /etc/cron.d/ -p wa -k cronjobs
 -w /var/spool/cron/ -p wa -k cronjobs
