@@ -1,5 +1,3 @@
-#### *V-270690* - Ubuntu 24.04 LTS must automatically lock an account until the locked account is released by an administrator when three unsuccessful logon attempts have been made.  
-
 ### V-270675 - Ubuntu 24.04 LTS when booted must require authentication upon booting into single-user and maintenance mo des. - Fail
 Not a typical feature on Raspberry Pi as it boots from an easily removeable SD Card.  Furth methods will be researched.  Physical protections would function as a mitigation. Locks, Tamper Detection, etc.
 ### V-270714 - Ubuntu 24.04 LTS must not allow accounts configured in Pluggable Authentication Modules (PAM) with blank or null passwords. - Fail
@@ -53,7 +51,7 @@ Needs to be researched
 ### V-270658 - Ubuntu 24.04 LTS audit event multiplexor must be configured to offload audit logs onto a different system or storage media from the system being audited. - Fail
 Needs to be configured/researched
 ### V-270690 - Ubuntu 24.04 LTS must automatically lock an account until the locked account is released by an administrator when three unsuccessful logon attempts have been made. - Fail
-For Platform IT systems you rarely have user accounts.  You have the system account, and you have the root account and root is locked only leaving sudo to root available. Locking after 3 failed logons will in general brick the system.  The alternative is to boot to single user mode if available and change the password.  The mitigation is PKI based logon which significantly reduces the likelihood of brute force logon.
+For Platform IT systems you rarely have user accounts.  You have a single administrative account, and you have the root account and root is locked.  Only sudo to root available. Locking after 3 failed logons would in general *brick* the system.  The alternative is to boot to single user mode if available and change the password.  The mitigation is PKI based logon which significantly reduces the likelihood of brute force logon.  Multiple Admin Accounts and Multiple PKI accounts are subject to further exploration.  It is out of scope but would fall under and extended set of enterprise PKI requirements.
 ### V-270734 - Ubuntu 24.04 LTS must be configured such that Pluggable Authentication Module (PAM) prohibits the use of cached authentications after one day. - Fail
 Requires full enterprise PKI implementation with CA and revocation checking. Out of scope
 ### V-270751 - Ubuntu 24.04 LTS must compare internal information system clocks at least every 24 hours with an authoritative time server. - Fail
