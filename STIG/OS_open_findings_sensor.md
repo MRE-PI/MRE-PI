@@ -1,5 +1,5 @@
 
-Results: Medium Severity (CAT I)  
+Results: High Severity (CAT I)  
 ================================
 
 ### V-270675 - Ubuntu 24.04 LTS when booted must require authentication upon booting into single-user and maintenance mo des. - Fail
