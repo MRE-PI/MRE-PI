@@ -124,18 +124,19 @@ Append to /etc/login.defs  file
 UMASK 077
 ```
 
-~~```markdown
+```markdown
 ~~sudo nano /etc/pam.d/login~~
 ```
 Make the following edits  
 ~~session required pam_lastlog.so showfailed~~  
+
 ~~+++++Remove any occurrence of "NOPASSWD" or "!authenticate" found in "/etc/sudoers" file or files in the "/etc/sudoers.d" directory.~~  
 
 #### *V-251504* - The operating system must not allow accounts configured with blank or null passwords.  
 ```markdown
 sudo nano /etc/pam.d/common-auth
 ```
-Remove or comment out the line:  
+Remove the word nullok from the line:  
 auth  [success=2 default=ignore]      pam_unix.so nullok  
 
 #### The following multiple V-IDs can be resolved with edits to /etc/ssh/sshd_config  
