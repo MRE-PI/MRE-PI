@@ -75,8 +75,6 @@ Ubuntu 24.04 LTS STIG Audit Rules
 -w /etc/sudoers -p wa -k privilege_modification  
 -w /etc/sudoers.d -p wa -k privilege_modification
 -w /var/log/sudo.log -p wa -k maintenance
--w /etc/cron.d/ -p wa -k cronjobs
--w /var/spool/cron/ -p wa -k cronjobs
 
 ```
 /etc/audit/rules.d/audit.rules  
