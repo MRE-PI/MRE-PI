@@ -34,6 +34,35 @@ ffmpeg is not a small install
 
 Once completed the sensor device can proceed to [OS Hardening](https://mre-pi.com/STIG/OS%20Hardening.html)  
 
+### Create the streaming service
+
+```markdown
+sudo nano /etc/systemd/system/streamslow.service
+```
+```markdown
+[Unit]
+Description=Start Camera Script
+After=multi-user.target
+[Service]
+ExecStart=/home/fox-admin/streamslow.sh
+Type=idle
+[Install]
+WantedBy=multi-user.target
+```
+
+```markdown
+sudo chmod 644 /etc/systemd/system/streamslow.service
+```
+Finally, tell systemd to run it at boot:
+```markdown
+sudo systemctl enable streamslow.service
+```
+```markdown
+sudo systemctl start streamslow.service
+```
+```markdown
+sudo systemctl restart streamslow.service
+```
 Edge Server Requirements
 ========================
 The Edge Server will require the following  
