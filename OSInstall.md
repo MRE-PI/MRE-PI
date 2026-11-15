@@ -33,6 +33,23 @@ sudo apt install ffmpeg rpicam-apps
 ffmpeg is not a small install  
 
 ### Create the streaming service  
+```markdown
+sudo nano streamslow.sh
+```
+```markdown
+#!/bin/bash
+nice -n -19 rpicam-vid -t 0s --width 1456 --height 1088 \
+--vflip --nopreview 1 --low-latency 1 --hdr off --flush 1 \
+--buffer-count 6 --exposure normal --sharpness 1.1 --contrast 1.2 \
+--brightness 0.0 --saturation 1.0 --ev +1.0 --awb auto \
+--profile high --level 4.2 --codec libav --libav-format flv \
+-n --framerate 5 -b 1550000 --autofocus-mode default --autofocus-range macro \
+--denoise auto --inline -g 60 \
+-o "rtmp://192.168.12.12/pi/PiCam2W05"
+```
+```markdown
+sudo chmod 755 /home/fox-admin/streamslow.sh
+```
 
 ```markdown  
 sudo nano /etc/systemd/system/streamslow.service  
