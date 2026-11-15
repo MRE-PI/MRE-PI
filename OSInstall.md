@@ -25,7 +25,10 @@ sudo apt update && sudo apt full-upgrade -y
 ```
 and second,
 ```markdown
-sudo apt install ffmpeg
+sudo apt remove rpicam-apps-lite
+```
+```markdown
+sudo apt install ffmpeg rpicam-apps
 ```
 ffmpeg is not a small install  
 
