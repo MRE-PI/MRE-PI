@@ -32,22 +32,20 @@ sudo apt install ffmpeg rpicam-apps
 ```
 ffmpeg is not a small install  
 
-Once completed the sensor device can proceed to [OS Hardening](https://mre-pi.com/STIG/OS%20Hardening.html)  
+### Create the streaming service  
 
-### Create the streaming service
-
-```markdown
-sudo nano /etc/systemd/system/streamslow.service
+```markdown  
+sudo nano /etc/systemd/system/streamslow.service  
 ```
 ```markdown
-[Unit]
-Description=Start Camera Script
-After=multi-user.target
-[Service]
-ExecStart=/home/fox-admin/streamslow.sh
-Type=idle
-[Install]
-WantedBy=multi-user.target
+[Unit]  
+Description=Start Camera Script  
+After=multi-user.target  
+[Service]  
+ExecStart=/home/fox-admin/streamslow.sh  
+Type=idle  
+[Install]  
+WantedBy=multi-user.target  
 ```
 
 ```markdown
@@ -61,10 +59,13 @@ sudo systemctl enable streamslow.service
 sudo systemctl start streamslow.service
 ```
 ```markdown
-sudo systemctl restart streamslow.service
+sudo systemctl restart streamslow.service  
 ```
-Edge Server Requirements
-========================
+
+Once completed the sensor device can proceed to [OS Hardening](https://mre-pi.com/STIG/OS%20Hardening.html)  
+
+Edge Server Requirements  
+========================  
 The Edge Server will require the following  
 1. Motion Application  
 2. MariaDB Database  
