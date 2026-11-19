@@ -50,6 +50,10 @@ nice -n -19 rpicam-vid -t 0s --width 1456 --height 1088 \
 ```markdown
 sudo chmod 755 /home/fox-admin/streamslow.sh
 ```
+For AI Camera
+```markdown
+sudo apt install imx500-all
+```
 
 ```markdown  
 sudo nano /etc/systemd/system/streamslow.service  
